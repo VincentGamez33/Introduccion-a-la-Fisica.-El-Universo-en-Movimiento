@@ -1,0 +1,1664 @@
+\chapter[Cinemática de una partícula]{CINEMÁTICA DE UNA PARTÍCULA}\label{chap:cap1}
+\startcontents
+\printchaptertableofcontents
+
+El estudio del movimiento ha representado una preocupación central en la historia del conocimiento humano, abarcando desde las primeras observaciones astronómicas hasta las aplicaciones avanzadas en ingeniería y tecnología. La cinemática, rama de la mecánica que se encarga de describir el movimiento sin analizar sus causas, constituye un pilar esencial en la comprensión de los fenómenos físicos.
+
+En el presente capítulo se abordarán las magnitudes fundamentales necesarias para describir el movimiento, tales como la posición, el desplazamiento, la velocidad y la aceleración. Estos conceptos no solo constituyen la base de la mecánica clásica, sino que además encuentran aplicaciones en diversas disciplinas, como la robótica, la biomecánica y la astrofísica. La rigurosa formulación matemática de dichas magnitudes permite modelar y predecir con precisión el comportamiento de los cuerpos en movimiento.
+
+Aunque sus orígenes se pueden rastrear hasta los filósofos griegos, el desarrollo de la cinemática alcanzó un punto de inflexión con Isaac Newton, quien introdujo el cálculo diferencial e integral. Estas herramientas matemáticas permitieron describir con exactitud la variación de la velocidad y la aceleración en función del tiempo, marcando el inicio de la física moderna y estableciendo las bases para el estudio de fenómenos más complejos.
+
+A lo largo del capítulo se adoptará un enfoque analítico y sistemático, desglosando cada concepto y estableciendo las interrelaciones pertinentes para construir una comprensión integral de la cinemática. Se presentarán diagramas, ejemplos ilustrativos y ejercicios que fomenten la reflexión acerca de la aplicabilidad de estos principios en diversos contextos.
+
+De este modo, el lector podrá apreciar que la descripción matemática del movimiento resulta fundamental no solo en el ámbito de la física, sino en cualquier disciplina que requiera un análisis preciso de las variaciones en el espacio y el tiempo. En consecuencia, la cinemática, más allá de su aplicabilidad práctica, pone de manifiesto la elegancia intrínseca de las leyes que rigen el universo.
+
+\section{Introducción a la Física}
+
+Desde tiempos inmemoriales, la humanidad ha mostrado una profunda curiosidad por comprender el entorno que la rodea. A través de la observación y el razonamiento, diversas civilizaciones han desarrollado métodos para explicar los fenómenos naturales, abarcando desde el movimiento de los astros hasta la composición de la materia. Este proceso de investigación ha evolucionado progresivamente, dando origen a lo que hoy denominamos ciencia.
+
+\subsection{¿Qué es la Ciencia?}
+
+La ciencia constituye un conjunto en constante crecimiento y evolución de ideas, caracterizado por su fundamento en el razonamiento, el orden sistemático, la precisión y la comprobabilidad. A este tipo de conocimiento se le denomina conocimiento científico.
+
+A continuación, se explican las características del conocimiento científico:
+\begin{itemize}
+    \item \textbf{Racional}: El conocimiento científico se fundamenta en conceptos, juicios y razonamientos, en contraposición a las meras sensaciones, imágenes, mitos, prejuicios o supersticiones.
+    \item \textbf{Sistemático}: La ciencia consiste en un conjunto de ideas interconectadas lógicamente. No se acumula de manera arbitraria o meramente cronológica, sino que se organiza en sistemas coherentes denominados teorías.
+    \item \textbf{Preciso}: Aunque el conocimiento científico nunca está completamente exento de errores o incertidumbres, se emplean técnicas específicas para minimizar estas deficiencias y optimizar la exactitud de los resultados.
+    \item \textbf{Comprobación}: Toda hipótesis debe someterse a pruebas rigurosas para determinar su validez. Se distinguen dos tipos de comprobación:
+    \begin{itemize}
+        \item La comprobación \textbf{formal} (demostración), exclusiva de las ciencias formales.
+        \item La comprobación \textbf{empírica} (verificación), propia de las ciencias materiales.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Clasificación de la Ciencia}
+
+Se distinguen dos grandes grupos de ciencias: las ciencias ideales o formales y las ciencias materiales o fácticas.
+
+Existen únicamente dos ciencias formales: la Lógica y las Matemáticas. Dichas disciplinas, al ser de carácter deductivo, no proporcionan información directa sobre la realidad empírica.
+
+Las ciencias materiales se subdividen en:
+\begin{itemize}
+    \item \textbf{Ciencias Naturales}: Incluyen disciplinas como la Física, Química, Biología, Astronomía, Geología, Geofísica, entre otras.
+    \item \textbf{Ciencias Sociales}: Abarcan áreas tales como la Sociología, Economía, Geografía, Psicología, etc.
+\end{itemize}
+
+El propósito de las ciencias materiales es alcanzar una reconstrucción conceptual de los fenómenos perceptibles (los hechos) que resulte cada vez más amplia, profunda y precisa, mientras que las ciencias formales se dedican a la demostración y prueba de conceptos.
+
+Las ciencias materiales verifican (confirman o refutan) hipótesis que, en su mayoría, son provisionales. Mientras que la demostración es completa y definitiva en el ámbito formal, la verificación en el contexto empírico es inherentemente incompleta y, por ende, temporal. La naturaleza del método científico impide la confirmación absoluta de las hipótesis materiales.
+
+Mientras que la Lógica y las Matemáticas constituyen ciencias puramente deductivas, las ciencias materiales requieren de observación y experimentación, además de la lógica formal, para corroborar sus conjeturas.
+
+Las principales características de las ciencias materiales son:
+\begin{enumerate}
+    \item \textbf{Objetividad}. La ciencia describe los hechos tal como son, sin incurrir en interpretaciones subjetivas o valores emocionales. No crea mitos a partir de los hechos, sino que busca una aproximación veraz a la realidad, validada mediante la observación y el experimento.
+    \item \textbf{Trascendencia}. La ciencia va más allá de la mera observación superficial, descartando datos irrelevantes para centrarse en aquellos que poseen relevancia y permiten explicar la realidad en términos de principios generales.
+    \item \textbf{Analítica}. La ciencia aborda problemas específicos de manera detallada, descomponiéndolos en sus elementos constitutivos para comprender la totalidad a partir de sus componentes y las relaciones que los integran.
+    \item \textbf{Especializada}. La descomposición analítica del conocimiento conduce a una especialización en áreas concretas, permitiendo un estudio más profundo de fenómenos particulares.
+    \item \textbf{Comunicable}. El conocimiento científico es accesible y se puede expresar mediante un lenguaje técnico que, aunque requiere formación especializada, facilita la difusión y el intercambio de ideas.
+    \item \textbf{Verificable}. Las hipótesis científicas deben someterse a pruebas empíricas. La verificación, si bien no garantiza una verdad absoluta, permite confirmar la adecuación de las hipótesis a la realidad.
+    \item \textbf{Metódica}. La investigación científica se caracteriza por un enfoque sistemático y planificado, empleando métodos experimentales rigurosos que aseguran la reproducibilidad y el control de los hechos.
+    \item \textbf{General y legal}. La ciencia identifica relaciones invariantes entre variables, lo que permite formular leyes generales que explican hechos singulares y, en ocasiones, predicen nuevos fenómenos.
+    \item \textbf{Explicativa}. La ciencia procura explicar los fenómenos en términos de leyes y principios, deduciendo proposiciones a partir de generalizaciones y fundamentos más básicos.
+    \item \textbf{Predictiva}. La aplicación de leyes generales posibilita la predicción de hechos futuros, constituyendo un mecanismo esencial para la validación de las hipótesis.
+    \item \textbf{Abierta}. La ciencia es un proceso dinámico y falible, siempre susceptible de revisión y corrección, ya que se basa en postulados que pueden ser modificados a la luz de nuevos hallazgos.
+    \item \textbf{Útil}. La aplicabilidad práctica del conocimiento científico se refleja en su capacidad para describir la realidad objetivamente y proporcionar herramientas que faciliten el desarrollo tecnológico y la mejora de la calidad de vida.
+\end{enumerate}
+
+A continuación, se muestra un diagrama que ilustra la estructura de la ciencia:
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node[fill=darkc!50,rounded corners,inner sep=6pt,] (ciencia) {\cafe\selectfont\bfseries\color{white}Ciencia};
+        
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (formales) [above right=7.55mm and 15mm of ciencia] {\parbox{2cm}{\centering\cafe\selectfont\bfseries\color{white}Ciencias\\Formales}};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (logica) [above right=0mm and 15mm of formales] {\parbox{22mm}{\centering\cafe\selectfont\bfseries\color{white}Lógica Formal}};
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (matematicas) [below right=0mm and 15mm of formales] {\parbox{22mm}{\centering\cafe\selectfont\bfseries\color{white}Matemáticas}};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (materiales) [below right=7.5mm and 15mm of ciencia] {\parbox{2cm}{\centering\cafe\selectfont\bfseries\color{white}Ciencias\\Materiales}};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (naturales) [above right=0mm and 15mm of materiales] {\parbox{21mm}{\centering\cafe\selectfont\bfseries\color{white}Ciencias Naturales}};
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (sociales) [below right=0mm and 15mm of materiales] {\parbox{21mm}{\centering\cafe\selectfont\bfseries\color{white}Ciencias Sociales}};
+
+        \draw[mainc!60,-Stealth,thick] (ciencia.east) -- (formales.west);
+        \draw[mainc!60,-Stealth,thick] (formales.east) -- (logica.west);
+        \draw[mainc!60,-Stealth,thick] (formales.east) -- (matematicas.west);
+
+        \draw[mainc!60,-Stealth,thick] (ciencia.east) -- (materiales.west);
+        \draw[mainc!60,-Stealth,thick] (materiales.east) -- (naturales.west);
+        \draw[mainc!60,-Stealth,thick] (materiales.east) -- (sociales.west);
+    \end{tikzpicture}
+    \caption{Clasificación de la Ciencia.}
+    \label{fig:clasificacion_ciencia}
+\end{figure}
+
+\subsection{¿Qué es la Física?}
+
+Una vez definido el concepto de ciencia, se procede a abordar la Física, disciplina que estudia los fenómenos naturales fundamentales, la materia, la energía y las interacciones entre ellos. Su propósito consiste en describir el comportamiento del universo a través de principios, leyes y modelos matemáticos que permitan interpretar y predecir diversos fenómenos.
+
+La Física no se limita a explicar los eventos naturales, sino que también fomenta el desarrollo tecnológico e innovador en campos tan variados como la ingeniería, la medicina y la astronomía. Su doble carácter, tanto experimental como teórico, la convierte en una ciencia fundamental que sustenta a otras disciplinas.
+
+Para abordar de manera sistemática los diversos fenómenos que estudia, la Física se organiza en varias ramas, determinadas por la naturaleza de los sistemas y los principios implicados.
+
+\subsubsection{Clasificación de la Física}
+
+La Física se divide en dos grandes ramas:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Física clásica}: Se encarga de estudiar aquellos fenómenos en los que la materia conserva su composición, analizando cambios de estado, movimiento, fuerzas, ondas y otros procesos en los que la estructura interna de los cuerpos permanece inalterada. Las ramas más destacadas son:
+    \begin{enumerate}[label=\textbf{\alph*)}]
+        \item \textbf{Mecánica}: Estudia el movimiento y el equilibrio de los cuerpos bajo la acción de fuerzas.
+        \item \textbf{Termodinámica}: Analiza los intercambios de calor y energía en los sistemas.
+        \item \textbf{Electromagnetismo}: Se enfoca en los fenómenos eléctricos y magnéticos, incluyendo la interacción entre cargas y campos.
+    \end{enumerate}
+    
+    \item \textbf{Física moderna}: Se centra en el estudio de los componentes fundamentales del universo, tales como la materia, la energía, el espacio-tiempo y los campos, abarcando las interacciones fundamentales de la naturaleza. A diferencia de la física clásica, que se aplica a escalas macroscópicas y velocidades relativamente bajas, la física moderna describe fenómenos que ocurren en condiciones extremas, ya sea a velocidades cercanas a la de la luz, en escalas atómicas y subatómicas o en la estructura del cosmos. Las ramas principales son:
+    \begin{enumerate}[label=\textbf{\alph*)}]
+        \item \textbf{Relatividad}: Formulada por Albert Einstein, describe el comportamiento de los cuerpos en movimiento a velocidades elevadas y la influencia de la gravedad sobre el espacio y el tiempo.
+        \item \textbf{Mecánica cuántica}: Estudia el comportamiento de las partículas a nivel atómico y subatómico, donde las leyes de la mecánica clásica dejan de ser aplicables.
+    \end{enumerate}
+\end{enumerate}
+
+A continuación, se presenta un mapa conceptual que ilustra la clasificación de la Física.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node[fill=darkc!50,rounded corners,inner sep=6pt,] (fisica) {\cafe\selectfont\bfseries\color{white}Física};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (clasica) [above right=1cm and 15mm of fisica] {\parbox{2cm}{\centering\cafe\selectfont\bfseries\color{white}Física\\Clásica}};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (mecanica) [above right=4mm and 16mm of clasica] {\parbox{34mm}{\centering\cafe\selectfont\bfseries\color{white}Mecánica}};
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (electromagnetismo) [right=0mm and 16mm of clasica] {\parbox{34mm}{\centering\cafe\selectfont\bfseries\color{white}Electromagnetismo}};
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (termodinamica) [below right=4mm and 16mm of clasica] {\parbox{34mm}{\centering\cafe\selectfont\bfseries\color{white}Termodinámica}};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (moderna) [below right=1cm and 15mm of fisica] {\parbox{2cm}{\centering\cafe\selectfont\bfseries\color{white}Física\\Moderna}};
+
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (cuantica) [above right=0mm and 16mm of moderna] {\parbox{34mm}{\centering\cafe\selectfont\bfseries\color{white}Mecánica\\Cuántica}};
+        \node[fill=darkc!50,rounded corners,inner sep=4pt] (relativista) [below right=0mm and 16mm of moderna] {\parbox{34mm}{\centering\cafe\selectfont\bfseries\color{white}Mecánica\\Relativista}};
+
+        \draw[mainc!60,thick,-Stealth] (fisica.east) -- (clasica.west);
+        \draw[mainc!60,thick,-Stealth] (clasica.east) -- (mecanica.west);
+        \draw[mainc!60,thick,-Stealth] (clasica.east) -- (electromagnetismo.west);
+        \draw[mainc!60,thick,-Stealth] (clasica.east) -- (termodinamica.west);
+
+        \draw[mainc!60,thick,-Stealth] (fisica.east) -- (moderna.west);
+        \draw[mainc!60,thick,-Stealth] (moderna.east) -- (cuantica.west);
+        \draw[mainc!60,thick,-Stealth] (moderna.east) -- (relativista.west);
+    \end{tikzpicture}
+    \caption{Mapa conceptual de la clasificación de la Física.}
+    \label{fig:clasificacion_fisica}
+\end{figure}
+
+Tanto la física clásica como la física moderna resultan esenciales para el avance de la ciencia y la tecnología en nuestra sociedad. Mientras que la física clásica continúa siendo la base de numerosas aplicaciones prácticas, la física moderna ha propiciado avances significativos en áreas tales como la computación cuántica, la medicina nuclear y la astrofísica.
+
+\section{Cantidades Físicas}
+
+Para describir con precisión los fenómenos estudiados en la Física, es imprescindible establecer un lenguaje cuantitativo fundamentado en las cantidades físicas, las cuales representan propiedades medibles de los sistemas y pueden ser observadas, cuantificadas y comparadas experimentalmente. Esta cuantificación es la base para formular leyes y modelos matemáticos que describen y predicen el comportamiento de la naturaleza.
+
+Las cantidades físicas se expresan mediante \textbf{magnitudes}, las cuales se relacionan con patrones o \textbf{unidades de medida} establecidos. Estas unidades actúan como estándares para la medición y permiten la comparación coherente entre distintos experimentos y observaciones. El proceso de medición, al vincular la experiencia empírica con el marco matemático, posibilita la validación y refinamiento de las teorías físicas.
+
+\subsection{Clasificación de las Magnitudes}
+
+Las magnitudes físicas se pueden clasificar de diversas maneras, siendo las siguientes algunas de las clasificaciones fundamentales:
+
+\begin{enumerate}
+    \item \textbf{Magnitudes escalares}: Son aquellas que se describen completamente mediante un único valor numérico, sin necesidad de indicar dirección o sentido. Ejemplos comunes son el tiempo, la masa, la temperatura y la longitud.
+    \item \textbf{Magnitudes vectoriales}: Requieren tanto un valor numérico como una dirección y un sentido para su completa especificación. Estas magnitudes son esenciales para describir fenómenos en los que la orientación es determinante, como en el caso del desplazamiento, la velocidad, la aceleración y la fuerza.
+\end{enumerate}
+
+Además, es habitual dividir las magnitudes en:
+
+\begin{itemize}
+    \item \textbf{Magnitudes fundamentales}: Aquellas que se definen de forma independiente y no dependen de otras cantidades. Por ejemplo, en el Sistema Internacional de Unidades (SI) se consideran fundamentales la longitud, la masa y el tiempo, entre otras.
+    \item \textbf{Magnitudes derivadas}: Se obtienen a partir de la combinación algebraica de las magnitudes fundamentales. La velocidad (longitud/tiempo), la aceleración (longitud/tiempo$^2$) y la fuerza (masa$\times$aceleración) son ejemplos clásicos de magnitudes derivadas.
+\end{itemize}
+
+\subsection{Unidades de Medida y el Sistema Internacional (SI)}
+
+El desarrollo de un sistema de unidades coherente y universal ha sido crucial para el avance de la Física. El SI, adoptado globalmente, se basa en siete unidades fundamentales: el metro (m) para la longitud, el kilogramo (kg) para la masa, el segundo (s) para el tiempo, el amperio (A) para la corriente eléctrica, el kelvin (K) para la temperatura, la mol (mol) para la cantidad de sustancia y la candela (cd) para la intensidad luminosa. A partir de estas unidades se definen todas las demás magnitudes derivadas mediante relaciones dimensionales, lo que facilita la verificación de la coherencia de las ecuaciones físicas a través del análisis dimensional.
+
+\subsection{Medición y Análisis Experimental}
+
+La precisión en la medición de las magnitudes físicas es vital. Los instrumentos de medición se calibran utilizando patrones reconocidos internacionalmente, lo que permite cuantificar la incertidumbre y el error experimental. Este análisis es fundamental para:
+\begin{itemize}
+    \item Establecer la fiabilidad y repetibilidad de los resultados experimentales.
+    \item Determinar la precisión con la que se pueden afirmar las leyes y teorías físicas.
+    \item Realizar el análisis de propagación de errores en magnitudes derivadas, asegurando que las conclusiones sean sólidas.
+\end{itemize}
+
+\subsection{Aplicación en el Estudio del Movimiento}
+
+En el estudio del movimiento, la correcta identificación y medición de las cantidades físicas es esencial. Por ejemplo:
+\begin{itemize}
+    \item \textbf{Posición y desplazamiento}: Mientras que la posición se indica en un sistema de coordenadas, el desplazamiento es una magnitud vectorial que refleja el cambio en la posición, considerando tanto la distancia como la dirección.
+    \item \textbf{Velocidad y aceleración}: La velocidad se define como el cambio de posición por unidad de tiempo, y la aceleración como el cambio de la velocidad. Ambas son magnitudes vectoriales y su análisis requiere tener en cuenta la dirección para comprender completamente el movimiento.
+    \item \textbf{Fuerza}: Es una magnitud vectorial que, según la segunda ley de Newton, se relaciona con la masa y la aceleración de un cuerpo. La dirección de la fuerza es determinante en la descripción del comportamiento dinámico de los sistemas.
+\end{itemize}
+
+La representación matemática de estos conceptos, mediante ecuaciones diferenciales y análisis vectorial, permite predecir el comportamiento de sistemas en movimiento, lo cual es la base para avances en áreas tan diversas como la ingeniería, la astrofísica y la biomecánica.
+
+\subsection{Importancia del Enfoque Cuantitativo}
+
+El enfoque cuantitativo en la Física no solo facilita la comprensión y la predicción de fenómenos naturales, sino que también permite:
+\begin{itemize}
+    \item \textbf{Unificar conceptos}: La sistematización de las cantidades físicas en un marco teórico coherente posibilita la integración de diferentes áreas de estudio bajo leyes universales.
+    \item \textbf{Desarrollar nuevas tecnologías}: La precisión en la medición y el análisis de datos físicos han sido determinantes en el desarrollo de tecnologías avanzadas, desde la electrónica hasta la exploración espacial.
+    \item \textbf{Fomentar el pensamiento crítico}: La capacidad de medir, analizar y comparar datos experimentales fomenta un enfoque crítico y riguroso, indispensable para la investigación científica.
+\end{itemize}
+
+En conclusión, las cantidades físicas y su tratamiento cuantitativo constituyen el fundamento esencial sobre el cual se edifica todo el conocimiento en Física. Su correcta definición, medición y análisis permiten describir, entender y predecir los fenómenos naturales, siendo herramientas indispensables en el estudio del movimiento y en el avance de la ciencia en general.
+
+Resulta particularmente interesante notar que, cuando estas cantidades poseen una dirección definida, su análisis se enriquece significativamente. Este aspecto nos conduce de forma natural al estudio del álgebra de vectores, que constituye la herramienta matemática ideal para tratar magnitudes vectoriales.
+
+\section{Álgebra de vectores}
+
+En física, especialmente en cinemática y dinámica, las cantidades físicas como velocidad, fuerza y aceleración se representan mediante vectores, los cuales tienen magnitud y dirección. El álgebra de vectores proporciona las herramientas necesarias para operar con estos vectores, permitiendo realizar operaciones como la suma, la resta y el producto por un escalar.
+
+Estas operaciones son fundamentales para describir y analizar el movimiento de los cuerpos, comprender las interacciones de las fuerzas y resolver problemas en el espacio tridimensional. En este contexto, los vectores juegan un papel clave, ya que permiten representar cantidades físicas mediante sus componentes en cada dirección del espacio.
+
+Para formalizar esta idea, introducimos la siguiente definición:
+
+\begin{definition}{}{componentes}
+    Sea el vector $\veca = (a_x, a_y, a_z)$, entonces se les denomina \textbf{componentes} del vector $\veca$ a los coordenadas $a_x, a_y, a_z$ que lo definen.
+\end{definition}
+
+La siguiente figura ilustra esta definición, mostrando un vector en el espacio tridimensional junto con sus componentes y sus proyecciones sobre los planos coordenados.
+
+\begin{figure}
+    \centering
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[scale=4, tdplot_main_coords]
+        \coordinate (O) at (0,0,0);
+        \pgfmathsetmacro{\ax}{0.8}
+        \pgfmathsetmacro{\ay}{0.8}
+        \pgfmathsetmacro{\az}{0.8}
+        \coordinate (P) at (\ax,\ay,\az);
+        \fill[mainc!40,opacity=0.3] (O) -- (\ax,\ay,0) -- (P) -- cycle;
+        \draw[linea punteada] (\ax,\ay,0) -- (P)
+            node[right] {\color{black}$(a_x, a_y, a_z)$} -- (0,0,\az)
+            node[left] {\color{black}$(0,0,a_z)$};
+        \draw[linea punteada] (O) -- (\ax,\ay,0)
+            node[below right] {\color{black}$(a_x,a_y,0)$};
+        \draw[linea punteada] (\ax,0,0)
+            node[left] {\color{black}$(a_x,0,0)$} -- (\ax,\ay,0);
+        \draw[linea punteada] (\ax,\ay,0) -- (0,\ay,0)
+            node[above right] {\color{black}$(0,a_y,0)$};
+        \draw[ejes] (0,0,0) -- (1.2,0,0)
+            node[anchor=north east]{$x$};
+        \draw[ejes] (0,0,0) -- (0,1.2,0)
+            node[anchor=north west]{$y$};
+        \draw[ejes] (0,0,0) -- (0,0,1.2)
+            node[anchor=south east]{$z$};
+        \draw[darkc] (0.73,0.73,0) -- (0.73,0.73,0.07) -- (\ax,\ay,0.07);
+        \draw[vector,mainc] (O) -- (P)
+            node[midway,above left] {\color{black}$\veca$};
+    \end{tikzpicture}
+    \caption{Representación geométrica del vector $\veca$.}
+    \label{fig:componentes}
+\end{figure}
+
+Además de sus componentes, un vector posee una magnitud o módulo, la cual se define de la siguiente manera:
+
+\begin{definition}{}{magnitud}
+    Definimos la \textbf{magnitud} del vector $\veca = (a_x, a_y, a_z)$ como el escalar:
+    $$a = |\veca| = \sqrt{a_x^2 + a_y^2 + a_z^2}.$$
+\end{definition}
+
+Un caso particular de gran utilidad en diversas aplicaciones es el de los vectores unitarios, los cuales se definen como sigue:
+
+\begin{definition}{}{vector_unitario}
+    Llamamos \textbf{unitario} a un vector que tiene magnitud igual a uno. A los vectores unitarios los podemos denotar con el símbolo circunflejo en lugar de la flecha arriba; es decir, si $\veca$ es un vector unitario $|\veca| = 1$, entonces podemos escribirlo como $\hat{a}$.
+\end{definition}
+
+\subsection{Suma de vectores}
+
+Con la noción de componentes y magnitud establecida, se fundamenta la operación de la suma de vectores en $\RR[3]$, la cual se define a continuación.
+
+\begin{definition}{}{suma_vectores}
+    Sean $\veca = (a_x, a_y, a_z)$ y $\vecb = (b_x, b_y, b_z)$ dos vectores en $\RR[3]$, donde $a_x, a_y, a_z, b_x, b_y, b_z \in \RR$. La \textbf{suma de vectores} $\veca + \vecb$ se define como el vector
+    $$\veca + \vecb = (a_x + b_x, a_y + b_y, a_z + b_z).$$
+    Es decir, la suma de los vectores es el vector cuyas componentes son la suma de las correspondientes componentes de $\veca$ y $\vecb$.
+\end{definition}
+
+Las propiedades básicas de la suma en $\RR$ se trasladan naturalmente a la suma de vectores, lo que nos permite afirmar y demostrar el siguiente:\sideFigure[\label{fig:conmutativa}Representación geométrica de la propiedad conmutativa.]{
+    \begin{tikzpicture}[scale=0.61]
+        \draw[ejes] (-0.5,0) -- (5,0);
+        \draw[ejes] (0,-0.5) -- (0,5);
+        \draw[linea punteada] (1,0) -- (1,3) -- (0,3);
+        \draw[linea punteada] (0,1) -- (3,1) -- (3,0);
+        \draw[linea punteada] (1,3) -- (4,4)
+            node[midway, above left] {\color{black}$\veca$} -- (3,1)
+            node[midway, below right] {\color{black}$\vecb$};
+        \draw[linea punteada] (4,0) -- (4,4) -- (0,4);
+        \draw[vector,mainc!80] (0,0) -- (3,1)
+            node[right] {\color{black}$\veca$};
+        \draw[vector,mainc!80] (0,0) -- (1,3)
+            node[above left] {\color{black}$\vecb$};
+        \draw[vector,darkc] (0,0) -- (4,4)
+            node[midway, rotate=45, above] {\color{black}$\veca + \vecb$};
+    \end{tikzpicture}
+}\sideFigure[\label{fig:asociativa}Representación geométrica de la propiedad asociativa.]{
+    \begin{tikzpicture}[scale=0.45]
+        \draw[ejes] (-0.5,0) -- (7,0);
+        \draw[ejes] (0,-0.5) -- (0,7);
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (3,1);
+        \coordinate (B) at (4,4);
+        \coordinate (S) at (6,6);
+        \draw[linea punteada] (3,0) -- (A) -- (0,1);
+        \draw[linea punteada] (1,0) -- (1,3) -- (0,3);
+        \draw[linea punteada] (4,0) -- (4,4) -- (0,4);
+        \draw[linea punteada] (4,4) -- (6,4) -- (6,6) -- (4,6) -- cycle;
+        \draw[vector,ultralightc] (O) -- (A)
+            node[midway,above] {\color{black}$\veca$};
+        \draw[vector,ultralightc] (A) -- (B)
+            node[midway,left] {\color{black}$\vecb$};
+        \draw[vector,ultralightc] (B) -- (S)
+            node[midway,below right] {\color{black}$\vecc$};
+        \coordinate (P) at (1,3);
+        \coordinate (Q) at (3,5);
+        \coordinate (S2) at (6,6);
+        \draw[linea punteada] (1,3) -- (3,3) -- (3,5) -- (1,5) -- cycle;
+        \draw[linea punteada] (3,5) -- (6,5) -- (6,6) -- (3,6) -- cycle;
+        \draw[vector, mainc] (O) -- (P)
+            node[midway,left] {\color{black}$\vecb$};
+        \draw[vector,mainc] (P) -- (Q)
+            node[midway,above left] {\color{black}$\vecc$};
+        \draw[vector,mainc] (Q) -- (S2)
+            node[midway,above left] {\color{black}$\veca$};
+        % \draw[vector,darkc] (O) -- (S)
+        %     node[midway,above,rotate=45] {\color{black}$(\veca + \vecb) + \vecc$};
+    \end{tikzpicture}
+}
+
+\begin{theorem}{}{conmutatividad_y_asociatividad}
+    Sean $\veca, \vecb, \vecc \in \RR[3]$ vectores. Entonces, la suma de vectores es conmutativa y asociativa. Es decir,
+    \begin{enumerate}[label=\textit{\roman*)}]
+        \item $\veca + \vecb = \vecb + \veca$
+        \item $(\veca + \vecb) + \vecc = \veca + (\vecb + \vecc)$
+    \end{enumerate}
+    \vspace{2mm}
+    \begin{demo}
+        \begin{enumerate}[label=\textit{\roman*)}]
+            \item Por las \refdef{componentes,suma_vectores}, se sigue que
+            \begin{align*}
+                \veca + \vecb & = (a_x + b_x, a_y + b_y, a_z + b_z)
+                \intertext{Debido a que la suma en $\RR$ es conmutativa, se tiene que} % , es decir, $a_x + b_x = b_x + a_x$, $a_y + b_y = b_y + a_y$ y $a_z + b_z = b_z + a_z$
+                & = (b_x + a_x, b_y + a_y, b_z + a_z) \\
+                & = (b_x, b_y, b_z) + (a_x, a_y, a_z) \\
+                & = \vecb + \veca.
+            \end{align*}
+            Por lo tanto, se cumple que $\veca + \vecb = \vecb + \veca$.
+            \item Análogamente al inciso anterior, consideramos ahora el lado izquierdo de la ecuación de la asociatividad:
+            \begin{align*}
+                (\veca + \vecb) + \vecc & = \big((a_x+b_x)+c_x, (a_y+b_y)+c_y, (a_z+b_z)+c_z\big) \\
+                & = (a_x + b_x + c_x, a_y + b_y + c_y, a_z + b_z + c_z) \\
+                & = (a_x+(b_x+c_x), a_y+(b_y+c_y), a_z+(b_z+c_z)) \\
+                & = \veca + (\vecb + \vecc).
+            \end{align*}
+            Por lo tanto, se cumple que $(\veca + \vecb) + \vecc = \veca + (\vecb + \vecc)$.
+        \end{enumerate}
+        Por lo tanto, queda demostrado así que la suma de vectores en $\RR[3]$ conserva las propiedades conmutativa y asociativa, heredadas directamente de las propiedades de la suma en $\RR$.
+    \end{demo}
+\end{theorem}
+
+En particular, además de la suma de vectores, otra operación fundamental en $\RR[3]$ es el producto de un escalar por un vector, el cual exploraremos a continuación.
+
+\subsection{Producto de un escalar por un vector}
+
+Habiendo establecido que la suma de vectores en $\RR[3]$ cumple las propiedades conmutativa y asociativa, podemos introducir una nueva operación fundamental en este espacio: el producto de un escalar por un vector.
+
+\begin{definition}{}{producto_escalar}
+    Sea $\lambda \in \RR$ un escalar y $\veca = (a_x, a_y, a_z) \in \RR[3]$ un vector. Se define el \textbf{producto de un escalar por un vector} como la operación que asigna a $\lambda$ y $\veca$ el vector:
+    $$\lambda \veca = (\lambda a_x, \lambda a_y, \lambda a_z).$$
+\end{definition}
+
+Esta operación cumple una serie de propiedades fundamentales, que se enuncian en el siguiente resultado.
+
+\begin{theorem}{}{propiedades_producto_escalar}
+    Sean $\veca, \vecb \in \RR[3]$ y sean $\lambda, \mu \in \RR$. Entonces se cumplen las siguientes propiedades:
+    % \begin{multicols}{2}
+        \begin{enumerate}[label=\textit{\roman*)}]
+            \item \textbf{Conmutatividad}: $\lambda \veca = \veca \lambda$.
+            \item \textbf{Asociatividad respecto al producto de escalares}: $(\lambda \cdot \mu)\veca = \lambda(\mu \cdot \veca)$.
+            \item \textbf{Distributividad respecto a la suma de escalares}: $(\lambda + \mu) \veca = \lambda\veca + \mu\veca$.
+            \item \textbf{Distributividad respecto a la suma de vectores}: $\lambda(\veca + \vecb) = \lambda\veca + \lambda\vecb$.
+        \end{enumerate}
+    % \end{multicols}
+    \dem Los incisos \textit{\creato\selectfont\color{mainc} ii)} y \textit{\creato\selectfont\color{mainc}iv)} se dejan como ejercicios para el lector.
+        \begin{enumerate}[label=\textit{\roman*)}]
+            \item Por la \refdef{producto_escalar} en $\RR[3]$, se tiene:
+            $$\lambda\veca = \lambda(a_x, a_y, a_z) = (\lambda a_x, \lambda a_y, \lambda a_z).$$
+            Usando la propiedad conmutativa del producto en $\RR$, se sigue que:
+            $$\lambda\veca = (a_x \lambda, a_y \lambda, a_z \lambda) = \veca\lambda.$$
+            Por lo tanto, se cumple la conmutatividad del producto escalar por un vector.
+            \item[\textit{iii)}] Por la \refdef{producto_escalar} se sigue:
+            \begin{align*}
+                (\lambda + \mu) \veca & = \left((\lambda + \mu)a_x, (\lambda + \mu)a_y, (\lambda + \mu)a_z\right).
+                \intertext{Aplicando la propiedad distributiva del producto respecto a la suma en $\RR$, se tiene que:}
+                & = (\lambda a_x + \mu a_x, \lambda a_y + \mu a_y, \lambda a_z + \mu a_z) \\
+                & = (\lambda a_x, \lambda a_y, \lambda a_z) + (\mu a_x, \mu a_y, \mu a_z) \\
+                & = \lambda\veca + \mu\veca.
+            \end{align*}
+            Por lo tanto, queda demostrada la distributividad respecto a la suma de escalares. \hfill \BlackSquare
+        \end{enumerate}
+\end{theorem}
+
+La demostración anterior nos permitió establecer propiedades fundamentales del producto de un escalar por un vector, como la conmutatividad y la distributividad respecto a la suma de escalares. Estas propiedades son esenciales en el desarrollo del álgebra vectorial, ya que describen con precisión la interacción entre vectores y escalares en $\RR[3]$.\sideFigure[\label{fig:producto_escalar}Representación geométrica del producto de un escalar por un vector.]{
+    \begin{tikzpicture}[scale=0.62]
+        \draw[linea punteada 2] (2.25,0) -- (2.25,2.25) -- (0,2.25);
+        \draw[linea punteada 2] (4,0) -- (4,4) -- (0,4);
+        \draw[linea punteada 2] (2.25,0) -- (2.25,2.25) -- (0,2.25);
+        \draw[ejes] (-0.5,0) -- (5,0);
+        \draw[ejes] (0,-0.5) -- (0,5);
+        \draw[vector,ultralightc!50] (0,0) -- (4,4)
+            node[above] {\color{black}$\lambda\veca$};
+        \draw[vector,mainc] (0,0) -- (2.25,2.25)
+            node[midway,above,rotate=45] {\color{black}$\veca$};
+    \end{tikzpicture}
+}\sideFigure[\label{fig:paralelismo}Interpretación geométrica del paralelismo de dos vectores.]{
+    \begin{tikzpicture}[scale=0.66]
+        \coordinate (lb1) at (-0.6153846153846,0.9230769230769);
+        \coordinate (lb2) at (2.3846153846154,2.9230769230769);
+        \draw[ejes] (-1,0) -- (4,0);
+        \draw[ejes] (0,-0.25) -- (0,4);
+        \draw[vector,mainc] (0,0) -- (3,2)
+            node[midway,above left] {\color{black}$\veca$};
+        \draw[vector,ultralightc] (lb1) -- (lb2)
+            node[midway,above left,rotate=33.6900675259798] {$\lambda\vecb$};
+    \end{tikzpicture}
+}
+
+En este contexto, es útil introducir una relación geométrica clave entre los vectores: el concepto de paralelismo.
+
+\begin{definition}{}{vectores_paralelos}
+    Se dice que dos vectores $\veca, \vecb \in \RR[3]$ son \textbf{paralelos} si existe un escalar $\lambda \in \RR$ tal que
+    $$\veca = \lambda \vecb.$$
+\end{definition}
+
+Geométricamente, esto significa que ambos vectores tienen la misma dirección o direcciones opuestas, dependiendo del signo de $\lambda$. Si $\lambda > 0$, los vectores apuntan en la misma dirección; si $\lambda < 0$, en direcciones opuestas (véase la Figura~\ref{fig:paralelismo}).
+
+El concepto de paralelismo es fundamental en numerosas aplicaciones de la física y la geometría, especialmente en el estudio de fuerzas, velocidades y líneas en el espacio. Por ejemplo, en el análisis del movimiento rectilíneo uniforme, las velocidades de diferentes partículas pueden representarse mediante vectores paralelos cuando todas se desplazan en la misma dirección, aunque con magnitudes distintas.
+
+Para describir con precisión cualquier vector en $\RR[3]$, resulta conveniente introducir un sistema de referencia basado en una base ortonormal:
+
+\begin{definition}{}{base_canonica}
+    En el sistema de coordenadas cartesianas, los \textbf{vectores canónicos}, también llamados \textbf{vectores de la base estándar}, se definen como
+    $$\veci = (1,0,0), \quad \vecj = (0,1,0), \quad \veck = (0,0,1).$$
+\end{definition}
+
+Estos vectores poseen propiedades fundamentales:
+
+\begin{itemize}
+    \item Son \textbf{unitarios}, es decir, su norma es 1.
+    \item Son \textbf{mutuamente perpendiculares}, formando así una \textbf{base ortonormal} en $\RR[3]$.
+    \item Permiten expresar cualquier vector como una combinación lineal sencilla.
+\end{itemize}
+
+\begin{definition}{}{vectores_con_base_canonica}
+    Dado un vector $\veca = (a_x, a_y, a_z)$, podemos expresarlo en términos de los vectores canónicos como
+    $$\veca = a_x\veci + a_y\vecj + a_z\veck.$$
+\end{definition}
+
+Esta descomposición es especialmente útil para realizar cálculos algebraicos y geométricos de manera estructurada.
+
+Ahora que disponemos de una forma clara y sistemática de representar los vectores en $\RR[3]$, podemos introducir una de las operaciones más fundamentales en el álgebra vectorial: el \textbf{producto interno}, herramienta clave para definir conceptos como la perpendicularidad y la proyección de vectores.
+
+\subsection{Producto interno o producto escalar}
+
+El producto interno, también conocido como producto escalar, es una operación que no solo nos permite calcular el ángulo entre dos vectores, sino también determinar la longitud de la proyección de un vector sobre otro. Además, esta operación tiene aplicaciones esenciales en diversas áreas de las matemáticas, la física y la ingeniería, ya que establece una forma natural de medir la ``relación" entre dos vectores. Al calcular el producto interno, podemos determinar si dos vectores son ortogonales y usar este criterio para diversos análisis.
+
+Gracias a esta propiedad geométrica, el producto interno facilita la resolución de problemas relacionados con la dirección y el ángulo entre vectores, como los utilizados en la teoría de proyecciones y en el análisis de sistemas lineales.
+
+\begin{definition}{}{producto_interno_geometrico}
+    El \textbf{producto interno} de dos vectores $\veca, \vecb \in \RR[3]$ se define como el número real dado por
+    $$\veca \cdot \vecb = \|\veca\| \|\vecb\| \cos\theta,$$
+    donde $\theta$ es el ángulo formado entre los vectores $\veca$ y $\vecb$. Se toma como referencia el menor de los dos ángulos suplementarios determinados por los vectores.
+\end{definition}
+
+El producto interno se puede calcular sin necesidad de conocer el ángulo explícitamente. Para ello, utilizamos una fórmula alternativa que expresa el producto interno directamente en términos de las coordenadas de los vectores. Esta fórmula se obtiene del uso del sistema de coordenadas cartesianas y proporciona una forma algebraica de calcular el producto interno sin recurrir al ángulo entre los vectores. Dicha fórmula, se demuestra del siguiente:
+
+\begin{theorem}{}{producto_interno_canonico}
+    Sean $\veca, \vec \in$ \RR[3] vectores. Entonces su producto interno puede expresarse como:
+    $$\veca \cdot \vecb = a_x b_x + a_y b_y + a_z b_z.$$
+    \dem Consideremos el producto interno de los vectores $\veca$ y $\vecb$, el cual, según la \refdef{producto_interno_geometrico}, está dado por la expresión
+        $$\veca \cdot \vecb = \|\veca\| \|\vecb\| \cos \theta,$$
+        donde $\theta$ es el ángulo entre los vectores $\veca$ y $\vecb$.
+        
+        Ahora, examinamos la magnitud del vector diferencia $ \vecb - \veca $. La magnitud al cuadrado de este vector se puede escribir como
+        $$\|\vecb - \veca\|^2 = (b_x - a_x)^2 + (b_y - a_y)^2 + (b_z - a_z)^2,$$
+        lo que se puede expandir utilizando la identidad algebraica para el cuadrado de la diferencia. Al desarrollar los términos, obtenemos
+        $$\|\vecb - \veca\|^2 = \sum_{i=x,y,z} (b_i^2 - 2a_i b_i + a_i^2) = \|\vecb\|^2 + \|\veca\|^2 - 2(a_x b_x + a_y b_y + a_z b_z).$$
+        
+        Por otro lado, la magnitud del vector diferencia también puede expresarse utilizando la ley de los cosenos para vectores. Esta ley establece que
+        $$\|\vecb - \veca\|^2 = \|\veca\|^2 + \|\vecb\|^2 - 2 \|\veca\| \|\vecb\| \cos \theta.$$
+        Al igualar ambas expresiones obtenidas para $\|\vecb - \veca\|^2$, se tiene
+        $$\|\veca\|^2 + \|\vecb\|^2 - 2(a_x b_x + a_y b_y + a_z b_z) = \|\veca\|^2 + \|\vecb\|^2 - 2 \|\veca\| \|\vecb\| \cos \theta.$$
+        Cancelando los términos comunes de ambos lados de la ecuación y multiplicando por $-\frac{1}{2}$, se obtiene
+        $$a_x b_x + a_y b_y + a_z b_z = \|\veca\| \|\vecb\| \cos \theta.$$
+        Finalmente, utilizando la \refdef{producto_escalar} del producto interno, se concluye que
+        \begin{equation*}
+            \veca \cdot \vecb = a_x b_x + a_y b_y + a_z b_z. \tag*{\BlackSquare}
+        \end{equation*}
+\end{theorem}
+
+Después de haber discutido el producto interno, es relevante abordar el concepto de otro tipo de operación entre vectores, el \textbf{producto cruz} o \textbf{producto vectorial}. Mientras que el producto interno da como resultado un número escalar, el producto cruz genera un vector que tiene una dirección perpendicular al plano determinado por los vectores involucrados, y cuya magnitud está relacionada con el área del paralelogramo que estos vectores definen.
+
+\subsection{Producto cruz o producto vectorial}
+
+A continuación, presentaremos la definición del producto cruz en $\RR[3]$, que es una operación fundamental para el análisis geométrico y físico, especialmente cuando se trata de calcular momentos de fuerza, áreas de superficies y otros conceptos vectoriales.\sideFigure[\label{fig:righthand_rule}Muestra la \textit{``regla de la mano derecha"}, utilizada para determinar la dirección del vector resultante en un producto cruz. Al extender los dedos de la mano derecha en la dirección de los vectores multiplicados, el pulgar apunta en la dirección del vector resultante. Figura adaptada del \href{https://tikz.net/righthand_rule/}{\color{mainc}sitio}.]{
+    \begin{tikzpicture}[scale=0.43,vector/.style={ultra thick,-latex}]
+        \coordinate (O) at (1.2,0.3); % ORIGIN
+        \coordinate (WT) at ( 2.9,-1.1); % WRIST TOP
+        \coordinate (T1) at ( 2.3, 0.7); % THUMB
+        \coordinate (T2) at ( 1.75, 2.3);
+        \coordinate (T3) at ( 2.0, 3.1);
+        \coordinate (T4) at (1.38, 3.15);
+        \coordinate (T5) at ( 0.9, 2.3);
+        \coordinate (T6) at ( 0.85, 1.2);
+        \coordinate (T7) at ( 0.85, 0.2);
+        \coordinate (I1) at (-1.0, 2.4); % INDEX
+        \coordinate (I2) at (-2.9, 3.45);
+        \coordinate (I3) at (-3.3, 2.9);
+        \coordinate (I4) at (-1.5, 1.8);
+        \coordinate (I5) at (-0.9, 1.1);
+        \coordinate (I6) at (-0.9, 0.5);
+        \coordinate (M1) at (-2.2, 1.25); % MIDDLE
+        \coordinate (M2) at (-3.9, 1.4);
+        \coordinate (M3) at (-4.0, 0.8);
+        \coordinate (M4) at (-2.3, 0.5);
+        \coordinate (M5) at (-1.1, 0.25);
+        \coordinate (R1) at (-1.9,-0.1); % RING
+        \coordinate (R2) at (-1.8,-0.7);
+        \coordinate (R3) at (-0.3,-1.5);
+        \coordinate (R4) at ( 0.1,-1.7);
+        \coordinate (R5) at ( 0.1,-1.0);
+        \coordinate (R6) at (-0.5,-0.7);
+        \coordinate (R7) at (-1.2,-0.3);
+        \coordinate (P1) at (-1.9,-1.3); % PINKY
+        \coordinate (P2) at (-0.8,-1.9);
+        \coordinate (P3) at (-0.2,-2.1);
+        \coordinate (P4) at (-0.05,-1.65);
+        \coordinate (W1) at ( 0.4,-2.9); % WRIST BOTTOM
+        \coordinate (W2) at ( 1.6,-3.5);
+        % HAND
+        \fill[brownskin]
+            (WT) -- (T6) -- (I5) -- (M5) -- (R2) -- (P2) -- (W2) to[out=25,in=-90] cycle;
+        \draw[fill=brownskin]
+            (WT) to[out=120,in=-60] % THUMB
+            (T1) to[out=120,in=-90]
+            (T2) to[out=80,in=-110]
+            (T3) to[out=80,in=50,looseness=1.5] % tip
+            (T4) to[out=-130,in=80]
+            (T5) to[out=-100,in=70]
+            (T6) to[out=-100,in=100]
+            (T7)
+            (T6) to[out=150,in=-30] % INDEX
+            (I1) to[out=150,in=-30]
+            (I2) to[out=150,in=145,looseness=1.7] % tip
+            (I3) to[out=-30,in=150]
+            (I4) to[out=-30,in=105]
+            (I5) to[out=-75,in=100]
+            (I6)
+            (I5) -- % MIDDLE
+            (M1) --
+            (M2) to[out=170,in=180,looseness=1.5] % tip
+            (M3) to[out=-5,in=175]
+            (M4) to[out=-5,in=165] % bottom knuckle
+            (M5)
+            (M5) to[out=-160,in=50] % RING
+            (R1) to[out=-130,in=140,looseness=1.2]
+            (R2) to[out=-30,in=160]
+            (R3) --
+            (R4) to[out=-20,in=-20,looseness=1.5] % tip
+            (R5) --
+            (R6) to[out=140,in=8,looseness=0.9]
+            (R7)
+            (R2) to[out=-160,in=155] % PINKY
+            (P1) to[out=-35,in=150]
+            (P2) to[out=-30,in=160]
+            (P3) to[out=-20,in=-30,looseness=1.5] % tip
+            %(P4) --
+            (R4)
+            (P2) to[out=-50,in=140] % WRIST
+            (W1) to[out=-40,in=160]
+            (W2);
+        % FOLDS
+        \draw[very thin] (T5)++(-80:0.3) to[out=40,in=180]++ (25:0.45);
+        \draw[very thin] (I1)++(180:0.2) to[out=-160,in=100]++ (-130:0.6);
+        \draw[very thin] (I1)++(155:1.3) to[out=-160,in=90]++ (-135:0.55);
+        \draw[very thin] (M4)++(140:0.1) to[out=110,in=-140]++ (80:0.6);
+        \draw[very thin] (M3)++(-5:0.6) to[out=100,in=-130]++ (80:0.5);
+        \draw[very thin] (M5)++(-140:0.1) to[out=-20,in=90]++ (-54:0.8); % RING
+        \draw[very thin] (R6) to[out=160,in=10]++ (180:0.2);
+        \draw[very thin] (R3)++(155:0.5) to[out=120,in=-100]++ (100:0.2);
+        \draw[very thin] (P2)++(140:0.1) to[out=95,in=-110]++ (80:0.4);
+        \draw[very thin] (I5)++(-40:0.45) to[out=-70,in=90]++ (-70:1.7);    % PALM
+        \draw[very thin] (P3)++(-155:0.05) to[out=-120,in=40]++ (-130:0.2); % PALM
+        \draw[very thin] (W2)++(80:1.3) to[out=-180,in=-50]++ (160:1.2); % PALM
+        % VECTORS
+        \draw[vector,darkc!80!white] (O) --++ (85:3.4)
+            node[above] {\color{black}$\veca\times\vecb$};
+        \draw[vector,mainc] (O) --++ (145:3.7) coordinate (A)
+            node[above left] {$\veca$};
+        \draw[vector,lightc!80] (O) --++ (172:3.7) coordinate (B)
+            node[left] {$\vecb$};
+        \draw pic[latex-,"$\theta$",draw=black,thick,angle radius=30,angle eccentricity=1.25] {angle = A--O--B};
+    \end{tikzpicture}
+}
+
+\begin{definition}{}{producto_cruz}
+    Definimos el \textbf{producto cruz} de dos vectores $\veca, \vecb \in \RR[3]$ como el vector $\veca \times \vecb$ que cumple:
+    $$\|\veca \times \vecb\| = \|\veca\|\,\|\vecb\| \sen \theta,$$
+    donde $\theta$ es el ángulo entre $\veca$ y $\vecb$. La dirección de $\veca \times \vecb$ es perpendicular al plano determinado por estos vectores y su sentido se establece mediante la \textbf{regla de la mano derecha} (veáse la Figura~\ref{fig:righthand_rule}). Formalmente, se expresa como:
+    $$\veca \times \vecb = \|\veca\|\,\|\vecb\| \sen \theta \,\vecu,$$
+    siendo $\vecu$ el vector unitario perpendicular a $\veca$ y $\vecb$ de acuerdo con dicha orientación.
+\end{definition}
+
+A continuación, se presenta un teorema que establece la expresión del producto vectorial en términos de un determinante:
+
+\begin{theorem}{}{producto_cruz_con_determinante}
+    Sean $\veca, \vecb \in$ \RR[3] vectores. Entonces su producto vectorial se expresa mediante
+    $$\veca \times \vecb =
+    \begin{vmatrix}
+        \veci & \vecj & \veck \\
+        a_x   & a_y   & a_z   \\
+        b_x   & b_y   & b_z
+    \end{vmatrix}
+    = (a_y b_z - a_z b_y)\,\veci + (a_z b_x - a_x b_z)\,\vecj + (a_x b_y - a_y b_x)\,\veck.$$
+    \begin{demo}
+        Definimos el producto vectorial como
+        $$\veca \times \vecb =
+        \begin{vmatrix}
+            \veci & \vecj & \veck \\
+            a_x   & a_y   & a_z   \\
+            b_x   & b_y   & b_z
+        \end{vmatrix},$$
+        y al expandir por cofactores en la primera fila, obtenemos:
+        $$\veca \times \vecb =
+        (a_y b_z - a_z b_y)\,\veci
+        + (a_z b_x - a_x b_z)\,\vecj
+        + (a_x b_y - a_y b_x)\,\veck.$$
+        Denotando $\veca \times \vecb = (c_1, c_2, c_3)$, donde
+        $$c_1 = a_y b_z - a_z b_y,\quad c_2 = a_z b_x - a_x b_z,\quad c_3 = a_x b_y - a_y b_x,$$
+        verificamos su ortogonalidad con respecto a $\veca$:
+        $$\veca \cdot (\veca \times \vecb) = a_x c_1 + a_y c_2 + a_z c_3 = 0,$$
+        ya que al sustituir y agrupar los términos, se anulan simétricamente. De manera análoga, se cumple
+        $$\vecb \cdot (\veca \times \vecb) = 0,$$
+        lo que confirma que $\veca \times \vecb$ es ortogonal a ambos vectores.
+
+        Finalmente, su magnitud se calcula como
+        $$\|\veca \times \vecb\| = \sqrt{c_1^2 + c_2^2 + c_3^2},$$
+        aplicando el teorema de Lagrange:
+        $$\|\veca \times \vecb\|^2 = \|\veca\|^2 \|\vecb\|^2 - (\veca \cdot \vecb)^2,$$
+        y sustituyendo \(\veca \cdot \vecb = \|\veca\|\,\|\vecb\|\,\cos\theta\), se obtiene:
+        $$\|\veca \times \vecb\|^2 = \|\veca\|^2 \|\vecb\|^2 (1 - \cos^2\theta).$$
+        Usando la identidad trigonométrica \(\sen^2\theta + \cos^2\theta = 1\), se concluye que:
+        $$\|\veca \times \vecb\| = \|\veca\|\,\|\vecb\|\,\sen\theta,$$
+        donde $\theta$ es el ángulo entre $\veca$ y $\vecb$. Esta magnitud corresponde al área del paralelogramo determinado por ambos vectores, otorgando una interpretación geométrica al producto vectorial.
+
+        En conclusión, la definición mediante determinantes proporciona un vector perpendicular a $\veca$ y $\vecb$, cuya magnitud representa el área del paralelogramo que forman.
+    \end{demo}
+\end{theorem}
+
+Posteriormente, se dan en el siguiente teorema las propiedades fundamentales del producto vectorial, las cuales lo convierten en una herramienta esencial en el estudio algebraico y geométrico de los vectores.
+
+\begin{theorem}{}{propiedades_producto_cruz}
+    Para cualesquiera $\veca, \vecb, \vecc \in \RR[3]$ y $\lambda \in \RR$, se verifican:
+    \begin{enumerate}[label=\textit{\roman*)}]
+        \item \textbf{Anticonmutatividad:} $\veca \times \vecb = -\vecb \times \veca$.
+        \item \textbf{Asociatividad:} $\lambda\,(\veca \times \vecb) = (\lambda\veca) \times \vecb = \veca \times (\lambda\vecb)$.
+        \item \textbf{Distributividad:} $\veca \times (\vecb + \vecc) = \veca \times \vecb + \veca \times \vecc$.
+        \item \textbf{Producto de Vectores Unitarios:} $\veci \times \veci = \vecj \times \vecj = \veck \times \veck = \vecce, \quad \veci \times \vecj = \veck, \quad \vecj \times \veck = \veci, \quad \veck \times \veci = \vecj.$
+    \end{enumerate}
+    \vspace{2mm}
+    \dem Los incisos \textit{\creato\selectfont\color{mainc}ii)}, \textit{\creato\selectfont\color{mainc}iii)} y \textit{\creato\selectfont\color{mainc}iv)} se dejan como ejercicio al lector.
+    \begin{enumerate}[label=\textit{\roman*)}]
+        \item Sean $\vec{u}, \vec{v} \in$ \RR[3], con componentes
+        $$\vec{u} = (u_1, u_2, u_3), \qquad \vec{v} = (v_1, v_2, v_3).$$
+        Usando la \refdef{producto_cruz}, el producto cruz de $\vec{u}$ con $\vec{v}$ se define como:
+        $$\vec{u} \times \vec{v} = 
+        \begin{vmatrix}
+            \veci & \vecj & \veck \\
+            u_1 & u_2 & u_3 \\
+            v_1 & v_2 & v_3
+        \end{vmatrix}
+        = (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}.$$
+        Análogamente, el producto cruz de $\vec{v}$ con $\vec{u}$ es:
+        $$\vec{v} \times \vec{u} = 
+        \begin{vmatrix}
+            \veci & \vecj & \veck \\
+            v_1 & v_2 & v_3 \\
+            u_1 & u_2 & u_3
+        \end{vmatrix}
+        = (v_2u_3 - v_3u_2)\hat{i} - (v_1u_3 - v_3u_1)\hat{j} + (v_1u_2 - v_2u_1)\hat{k}.$$
+        Observamos que:
+        $$\vec{v} \times \vec{u} = -\left( (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k} \right) = -(\vec{u} \times \vec{v}).$$
+        Por lo tanto, producto cruz es anticonmutativo. Es decir,
+        \begin{equation*}
+            \vec{v} \times \vec{u} = -(\vec{u} \times \vec{v}). \tag*{\BlackSquare}
+        \end{equation*}
+    \end{enumerate}
+\end{theorem}
+
+\subsection{Derivada de un vector}
+
+Habiendo establecido las propiedades fundamentales del producto vectorial y, en general, de las operaciones vectoriales, es natural extender el análisis a funciones vectoriales. Cuando las componentes de un vector son funciones diferenciables de una variable independiente $t$, podemos definir la derivada de dicho vector de forma coherente con el cálculo diferencial.
+
+\begin{definition}{}{derivada_vector}
+    Sea $\vecr(t) = x(t)\,\veci + y(t)\,\vecj + z(t)\,\veck$ un vector cuyas componentes $x(t)$, $y(t)$ y $z(t)$ son funciones diferenciables de $t$. La derivada de $\vecr(t)$ con respecto a $t$ se define por
+    $$\frac{d\vecr}{dt} = \frac{dx}{dt}\,\veci + \frac{dy}{dt}\,\vecj + \frac{dz}{dt}\,\veck.$$
+\end{definition}
+
+Esta definición preserva la estructura del cálculo diferencial escalar y permite establecer las siguientes propiedades básicas de la derivada vectorial:
+
+\begin{theorem}{}{propiedades_funciones_vectoriales_derivables}
+    Sean $\veca(t)$ y $\vecb(t)$ funciones vectoriales diferenciables de $t$, y sea $\phi(t)$ una función escalar diferenciable. Entonces se cumplen las siguientes propiedades:
+    \begin{enumerate}[label=\textit{\roman*)}]
+        \item \textbf{Linealidad}:
+        $$\frac{d}{dt} \bigl(\veca(t) + \vecb(t)\bigr) = \frac{d}{dt}\veca(t) + \frac{d}{dt}\vecb(t).$$
+        \item \textbf{Derivada del Producto Escalar}:
+        $$\frac{d}{dt} \bigl(\veca(t) \cdot \vecb(t)\bigr) = \frac{d\veca(t)}{dt} \cdot \vecb(t) + \veca(t) \cdot \frac{d\vecb(t)}{dt}.$$
+        \item \textbf{Derivada del Producto Vectorial}:
+        $$\frac{d}{dt} \bigl(\veca(t) \times \vecb(t)\bigr) = \frac{d\veca(t)}{dt} \times \vecb(t) + \veca(t) \times \frac{d\vecb(t)}{dt}.$$
+        \item \textbf{Derivada del Producto Escalar-Vectorial}:
+        $$\frac{d}{dt} \bigl(\phi(t)\,\veca(t)\bigr) = \frac{d\phi(t)}{dt}\,\veca(t) + \phi(t)\,\frac{d\veca(t)}{dt}.$$
+    \end{enumerate}
+    \begin{demo}
+        Los incisos \textit{\creato\selectfont\color{mainc}ii)}, \textit{\creato\selectfont\color{mainc}iii)} y \textit{\creato\selectfont\color{mainc}iv)} se dejan como ejercicios para el lector.
+        \begin{enumerate}[label=\textit{\roman*)}]
+            \item Suponiendo que $\veca(t)$ y $\vecb(t)$ son funciones diferenciables respecto del tiempo y utilizando la \refdef{derivada_vector} tenemos que
+                \begin{fullwidth}[      width=\dimexpr\textwidth-\marginparsep-2cm\relax,%
+                                  outermargin=\dimexpr-2cm-\marginparsep\relax]%
+                    \begin{align*}
+                        \frac{d \bigl(\veca(t) + \vecb(t)\bigr)}{dt} & = \lim_{\Deltat \to 0} \left[\frac{\veca(t + \Deltat) - \veca(t)}{\Deltat} + \frac{\vecb(t + \Deltat) - \vecb(t)}{\Deltat}\right] \\
+                        & = \lim_{\Deltat \to 0} \frac{\veca(t + \Deltat) - \veca(t)}{\Deltat} + \lim_{\Deltat \to 0} \frac{\vecb(t + \Deltat) - \vecb(t)}{\Deltat} \\
+                        & = \lim_{\Deltat \to 0} \left(\frac{[a_x(t + \Deltat)\veci + a_y(t + \Deltat)\vecj + a_z(t + \Deltat)\veck] - [a_x(t)\veci + a_y(t)\vecj + a_z(t)\veck]}{\Deltat}\right) \, + \\
+                        & \quad + \lim_{\Deltat \to 0} \left(\frac{[b_x(t + \Deltat)\veci + b_y(t + \Deltat)\vecj + b_z(t + \Deltat)\veck] - [b_x(t)\veci + b_y(t)\vecj + b_z(t)\veck]}{\Deltat}\right) \\
+                        & = \lim_{\Deltat \to 0} \left(\frac{a_x(t + \Deltat) - a_x(t)}{\Deltat}\veci + \frac{a_y(t + \Deltat) - a_y(t)}{\Deltat}\vecj + \frac{a_z(t + \Deltat) - a_z(t)}{\Deltat}\veck\right) \, + \\
+                        & \quad + \lim_{\Deltat \to 0} \left(\frac{b_x(t + \Deltat) - b_x(t)}{\Deltat}\veci + \frac{b_y(t + \Deltat) - b_y(t)}{\Deltat}\vecj + \frac{b_z(t + \Deltat) - b_z(t)}{\Deltat}\veck\right) \\
+                        & = \left[\lim_{\Deltat \to 0} \frac{\Deltaax}{\Deltat}\veci + \lim_{\Deltat \to 0} \frac{\Deltaay}{\Deltat}\vecj + \lim_{\Deltat \to 0} \frac{\Deltaaz}{\Deltat}\veck\right] + \left[\lim_{\Deltat \to 0} \frac{\Deltabx}{\Deltat}\veci + \lim_{\Deltat \to 0} \frac{\Deltaby}{\Deltat}\vecj + \lim_{\Deltat \to 0} \frac{\Deltabz}{\Deltat}\veck\right] \\
+                        & = \left(\frac{d\,a_x}{dt}\,\veci + \frac{d\,a_y}{dt}\,\vecj + \frac{d\,a_z}{dt}\,\veck\right) + \left(\frac{d\,b_x}{dt}\,\veci + \frac{d\,b_y}{dt}\,\vecj + \frac{d\,b_z}{dt}\,\veck\right) \\
+                        & = \frac{d}{dt}\veca(t) + \frac{d}{dt}\vecb(t).
+                    \end{align*}
+                \end{fullwidth}
+        \end{enumerate}
+        Por lo tanto, queda demostrado que $\dfrac{d}{dt} \bigl(\veca(t) + \vecb(t)\bigr) = \dfrac{d}{dt}\veca(t) + \dfrac{d}{dt}\vecb(t).$
+    \end{demo}
+\end{theorem}
+
+Estas propiedades constituyen la base del cálculo diferencial aplicado a funciones vectoriales. Al preservar la estructura del cálculo escalar, nos permiten extender de forma natural las técnicas de diferenciación a trayectorias y campos en el espacio, lo cual resulta fundamental para el estudio del movimiento. Con estos resultados en mano, pasamos a abordar la cinemática, la rama de la mecánica que se ocupa de describir el movimiento sin considerar las causas que lo originan.
+
+\section{Cinemática de una partícula}
+
+La cinemática constituye la rama de la mecánica que se ocupa de describir el movimiento sin analizar las causas que lo generan. Inicialmente se considerará el movimiento de una partícula, la cual, al ser un objeto de dimensiones despreciables, experimenta únicamente traslación; es decir, su posición varía en el tiempo sin sufrir rotaciones o precesiones, como ocurre en el caso de cuerpos extendidos.
+
+Para establecer una base conceptual clara, se introducen a continuación las definiciones fundamentales que describen los elementos y las magnitudes involucradas en el estudio de la cinemática.
+
+\begin{definition}{}{particula}
+    Se define una \textbf{partícula} como un objeto de dimensiones despreciables. Una partícula ideal se asimila a un punto en el espacio cartesiano, carente de longitud, área o volumen, y que posee únicamente una posición bien definida, determinada por las coordenadas $x$, $y$ y $z$. Posteriormente, a dicha partícula se le podrán asignar propiedades físicas, tales como la masa o la carga eléctrica.
+\end{definition}
+
+El primer paso para describir el movimiento de una partícula es determinar su localización en el espacio, lo cual se realiza a través del concepto de posición.
+
+\begin{definition}{}{posicion}
+    Se define a la \textbf{posición} de una partícula mediante el vector
+    $$\vecr = x\veci + y\vecj + z\veck,$$
+    donde $x = x(t)$, $y = y(t)$ y $z = z(t)$ representan las coordenadas del punto en el espacio que ocupa la partícula en el instante $t$. Las componentes del vector de posición son funciones continuas y diferenciables respecto al tiempo.
+\end{definition}
+
+Una vez establecida la posición, es natural introducir la noción de desplazamiento, que nos permite cuantificar el cambio de posición entre dos instantes.
+
+\begin{definition}{}{desplazamiento}
+    Se define el \textbf{desplazamiento} de una partícula entre una posición inicial $\vecr_0$ y una posición final $\vecr$ mediante el vector
+    $$\Delta\vecr = \vecr - \vecr_0.$$
+    De forma equivalente,
+    $$\Delta\vecr = (x - x_0)\veci + (y - y_0)\vecj + (z - z_0)\veck,$$
+    o, alternativamente,
+    $$\Deltar = \Deltax\veci + \Deltay\vecj + \Deltaz\veck.$$
+\end{definition}
+
+En este contexto, la posición inicial se entiende como aquella en la que se encuentra la partícula en un instante inicial de tiempo, habitualmente definido como $t=0$, el momento en que se inicia la medición temporal. La figura que sigue ilustra de forma gráfica la relación entre los vectores de posición y desplazamiento.
+
+\begin{figure}
+    \centering
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[scale=1.6,tdplot_main_coords]
+
+        \coordinate (O) at (0,0,0);
+        \coordinate (r0) at (3,0,1.5);
+        \coordinate (r) at (0,2,1.5);
+        \coordinate (-r0) at (-3,1.75,-0.25);
+
+        \draw[ejes] (0,0,0) -- (3,0,0) node[below] {$x$};
+        \draw[ejes] (0,0,0) -- (0,3,0) node[right] {$y$};
+        \draw[ejes] (0,0,0) -- (0,0,2) node[above] {$z$};
+
+        \draw[ultralightc,thick]
+            plot[smooth,tension=0.6]
+            coordinates {
+                (3.6,-0.6,1) (r0) (0.7,0.5,1.6) (1,1.5,2) (r) (0,2.9,1.3)
+            };
+
+        \draw[vector,mainc] (O) -- (r0)
+            node[midway,fill=white,inner sep=2pt] {\color{black}$\vecr_0$}
+            node[above left] {\color{black}$(x_0,y_0,z_0)$};
+        \draw[vector,darkc] (O) -- (r)
+            node[midway,fill=white,inner sep=3pt] {\color{black}$\vecr$}
+            node[above right] {\color{black}$(x,y,z)$};
+        \draw[vector,mainc!75] (r) -- (-r0)
+            node[midway,below left] {\color{black}$-\vecr_0$};
+        \draw[vector,red] (r0) -- (r)
+            node[midway,above] {\color{black}$\Deltar$};
+        \draw[vector,red!75] (O) -- (-r0);
+
+        \foreach \x/\y/\z in {3/0/1.5, 0/2/1.5} {
+            \filldraw[black] (\x,\y,\z) circle (0.5pt);
+        }
+    \end{tikzpicture}
+    \caption{La figura ilustra un sistema de coordenadas tridimensional con los vectores de posición $\vecr_0$ y $\vecr$. Además, muestra el desplazamiento $\Deltar$ entre ambos puntos sobre una curva en el espacio, destacando la relación entre los vectores y sus coordenadas respectivas.}
+    \label{fig:desplazamiento}
+\end{figure}
+
+El desplazamiento permite introducir el concepto de velocidad, inicialmente a través de la velocidad media, que relaciona el cambio de posición con el intervalo de tiempo transcurrido.
+
+\begin{definition}{}{velocidad_media}
+    Se define la \textbf{velocidad media} de una partícula, entre la posición inicial $\vecr_0$ y la posición final $\vecr$, mediante el vector
+    $$\velom = \frac{1}{\Deltat}\Deltar = \frac{\Deltax}{\Deltat}\veci + \frac{\Deltay}{\Deltat}\vecj + \frac{\Deltaz}{\Deltat}\veck,$$
+    donde $\Deltat = t - t_0$ representa el intervalo de tiempo transcurrido entre ambas posiciones.
+\end{definition}
+
+Cabe destacar que la velocidad media tiene la misma dirección que el desplazamiento. Su magnitud, denominada rapidez media, se expresa como
+$$\velom = \sqrt{\left(\frac{\Deltax}{\Deltat}\right)^2 + \left(\frac{\Deltay}{\Deltat}\right)^2 + \left(\frac{\Deltaz}{\Deltat}\right)^2} = \frac{1}{\Deltat}\sqrt{\Deltax^2 + \Deltay^2 + \Deltaz^2}.$$
+Si se denota la distancia entre la posición inicial y final por $d$ y se establece $t_0 = 0$, se tiene que
+$$\velom = \frac{d}{t}.$$
+Esta definición aclara que, por ejemplo, una velocidad media de 100\,km/h indica que la distancia neta entre el punto de partida y el de llegada es de 100\,km, sin considerar la longitud total de la trayectoria recorrida, como se ilustra en la Figura~\ref{fig:velocidad_media}.\sideFigure[\label{fig:velocidad_media}Curva entre los puntos $A$ y $B$, con los vectores $\Deltar$ y $\velom$ que representan el desplazamiento y la dirección de la velocidad media, respectivamente.][6cm]{
+    \begin{tikzpicture}[scale=0.47]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (5,3);
+        \draw[papa]
+            plot[smooth,tension=0.6]
+            coordinates {
+                (A) (0.8,0.5) (2.1,0.6) (1.3,0) (3.3,-0.2) (3.1,1.1) (4,1.5) (5.75,1.3) (6,2.1) (3.8,2) (4.2,2.8) (B)
+            };
+        \filldraw[black] (A) circle (1.5pt) node[left] {$A$};
+        \filldraw[black] (B) circle (1.5pt) node[right] {$B$};
+        \draw[vector,red] (A) -- (B)
+            node[midway,above,rotate=30.9637] {$\Deltar$};
+        \draw[vector,mainc] (0.4,0.64) -- (1.7,1.42)
+            node[midway,above,rotate=30.9637] {$\velom$};
+    \end{tikzpicture}
+}
+
+El análisis del movimiento se enriquece al considerar el comportamiento instantáneo de la partícula. Para ello, se define la velocidad instantánea como el límite de la velocidad media cuando el intervalo de tiempo tiende a cero.
+
+\begin{definition}{}{velocidad_instantanea}
+    Se define la \textbf{velocidad instantánea} de una partícula, en la posición $\vecr_0$, como el \textbf{límite} de la velocidad media cuando el desplazamiento $\Deltar$ tiende a cero (es decir, cuando $\Deltat \to 0$):
+    $$\veloi = \lim_{\Deltat \to 0}\left(\frac{1}{\Deltat}\Deltar\right).$$
+    Expresado en componentes:
+    $$\veloi = \lim_{\Deltat \to 0}\frac{\Deltax}{\Deltat}\veci + \lim_{\Deltat \to 0}\frac{\Deltay}{\Deltat}\vecj + \lim_{\Deltat \to 0}\frac{\Deltaz}{\Deltat}\veck.$$
+\end{definition}
+
+De esta forma, se puede escribir de forma compacta:
+$$\veloi = \frac{d}{dt}\vecr\Big|_{\vecr = \vecr_0} = \frac{d}{dt}\vecr\Big|_{t = t_0}.$$
+Dado que $\vecr_0$ es una posición arbitraria, la notación se simplifica a:
+$$\veloi = \frac{d}{dt}\vecr,$$
+con componentes
+$$v_x = \frac{d}{dt}x,\quad v_y = \frac{d}{dt}y,\quad \text{y} \quad v_z = \frac{d}{dt}z.$$
+Es importante notar que la velocidad instantánea es un vector tangente a la trayectoria, ya que al acercarse la posición final $\vecr$ a la posición inicial $\vecr_0$, el desplazamiento representado por las secantes a la curva converge hacia el vector tangente (véase la Figura~\ref{fig:velocidad_instantanea}).
+
+\begin{figure}
+    \centering
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[scale=1.7,tdplot_main_coords]
+        \coordinate (O) at (0,0,0);
+        \coordinate (t0) at (3,0,1.5);
+        \coordinate (r0) at (1,1.7,2.2);
+        \coordinate (r1) at (0,2.5,2.1);
+        \coordinate (r2) at (0,3.7,2);
+        \coordinate (r3) at (0,4.5,1.7);
+        
+        \draw[ejes] (O) -- (3,0,0) node[below] {$x$};
+        \draw[ejes] (O) -- (0,5,0) node[right] {$y$};
+        \draw[ejes] (O) -- (0,0,2) node[above] {$z$};
+
+        \draw[ultralightc,thick]
+            plot[smooth,tension=0.7]
+            coordinates {
+                (t0) (0.7,0.5,1.55) (r0) (r1) (r2) (r3) (0,5,1.4)
+            };
+
+        \draw[gray,thick] (r0) -- (r1) node[above] {$\Deltar_1$};
+        \draw[gray,thick] (r0) -- (r2) node[above] {$\Deltar_2$};
+        \draw[gray,thick] (r0) -- (r3) node[above] {$\Deltar_3$};
+
+        \draw[vector,red] (r0) -- (1-0.77, 1.7+0.4, 2.2+0.1) 
+            node[midway,above left] {$\veloi$};
+
+        \foreach \x/\y/\z in {1/1.7/2.2, 0/2.5/2.1, 0/3.7/2, 0/4.5/1.7} {
+            \filldraw[black] (\x,\y,\z) circle (0.5pt);
+        }
+
+        \draw[vector,mainc] (O) -- (r0)
+            node[midway,fill=white,inner sep=1pt] {\color{black}$\vecr_0$};
+        \draw[vector,mainc] (O) -- (r1)
+            node[midway,fill=white,inner sep=2pt] {\color{black}$\vecr_1$};
+        \draw[vector,mainc] (O) -- (r2)
+            node[midway,fill=white,inner sep=2pt] {\color{black}$\vecr_2$};
+        \draw[vector,mainc] (O) -- (r3)
+            node[midway,fill=white,inner sep=2pt] {\color{black}$\vecr_3$};
+    \end{tikzpicture}
+    \caption{El gráfico muestra la trayectoria de un objeto, con los vectores de posición $\vec{r}_0, \vec{r}_1, \vec{r}_2, \vec{r}_3$ conectados por una curva. Los vectores $\Deltar_1, \Deltar_2, \Deltar_3$ representan los desplazamientos entre posiciones, mientras que el vector rojo $\veloi$ indica un cambio en la velocidad.}
+    \label{fig:velocidad_instantanea}
+\end{figure}
+
+De manera análoga, se define la aceleración, la cual mide el cambio de la velocidad a lo largo del tiempo.
+
+\begin{definition}{}{aceleracion_media}
+    Se define la \textbf{aceleración media} de una partícula, comprendida entre la posición inicial $\vecr_0$ y la posición final $\vecr$, como el vector
+    $$\acem = \frac{1}{\Deltat}\Deltav,$$
+    donde $\Deltav = \veloi - \veloi_0$ representa el cambio en la velocidad instantánea entre ambas posiciones. De este modo,
+    $$\acem = \frac{\Deltavx}{\Deltat}\veci + \frac{\Deltavy}{\Deltat}\vecj + \frac{\Deltavz}{\Deltat}\veck.$$
+\end{definition}
+
+La descripción del movimiento se completa al analizar el comportamiento instantáneo de la aceleración, definida como el límite de la aceleración media cuando el intervalo de tiempo se hace infinitesimal.
+
+\begin{definition}{}{aceleracion_instantanea}
+    Se define la \textbf{aceleración instantánea} de una partícula, en la posición $\vecr_0$, como el límite de la aceleración media cuando $\Deltat \to 0$ (o, de forma equivalente, cuando $\Deltar \to \vecce$):
+    $$\acei = \lim_{\Deltat \to 0}\left(\frac{1}{\Deltat}\Deltav\right).$$
+    Expresado en componentes:
+    \begin{align*}
+        \acei & = \lim_{\Deltat \to 0}\frac{\Deltavx}{\Deltat}\veci + \lim_{\Deltat \to 0}\frac{\Deltavy}{\Deltat}\vecj + \lim_{\Deltat \to 0}\frac{\Deltavz}{\Deltat}\veck \\
+        \acei & = \frac{d}{dt}v_x\Big|_{x = x_0}\veci + \frac{d}{dt}v_y\Big|_{y = y_0}\vecj + \frac{d}{dt}v_z\Big|_{z = z_0}\veck.
+    \end{align*}
+\end{definition}
+
+De esta definición se sigue que, de forma compacta, se tiene:
+$$\acei = \frac{d}{dt}\veloi\Big|_{\vecr = \vecr_0} = \frac{d}{dt}\veloi\Big|_{t = t_0},$$
+y al considerar que $\vecr_0$ es arbitrario,
+$$\acei = \frac{d}{dt}\veloi.$$
+Por ello, sus componentes se expresan como
+$$a_x = \frac{d}{dt}v_x,\quad a_y = \frac{d}{dt}v_y,\quad \text{y} \quad a_z = \frac{d}{dt}v_z,$$
+lo que permite identificar a la aceleración instantánea como la segunda derivada del vector posición:
+$$\acei = \frac{d}{dt}\veloi = \frac{d^2}{dt^2}\vecr.$$
+
+Es relevante mencionar que estos conceptos históricos, atribuidos a Isaac Newton, surgieron junto con el desarrollo del cálculo diferencial e integral para comprender la mecánica de los cuerpos. Newton denominó \textbf{fluxión} a la derivada respecto del tiempo, de modo que la velocidad instantánea se expresaba como
+$$\veloi = \veloinew,$$
+y la aceleración como
+$$\acei = \dot{\veloi} = \aceinew,$$
+donde el punto sobre una cantidad indica su derivada temporal, y dos puntos indican la segunda derivada.
+
+Cada una de estas definiciones y conceptos se conecta de forma natural: se parte de la descripción del objeto en estudio (la partícula), se determina su posición en el espacio, se cuantifica el cambio de posición mediante el desplazamiento, se introduce la velocidad (primero como una medida promedio y luego en forma instantánea), y finalmente se analiza la aceleración, que es el cambio de la velocidad. Esta progresión facilita la comprensión integral de la cinemática, permitiendo aplicar de manera sistemática las herramientas matemáticas al estudio del movimiento.
+
+A partir de esta base general, podemos particularizar nuestro análisis a un caso más simple, pero igualmente fundamental.
+
+\section{Cinemática del movimiento en una dimensión}  
+
+Hasta ahora, hemos definido las cantidades físicas vectoriales necesarias para describir el movimiento de una partícula en el espacio tridimensional. Sin embargo, en muchos casos es útil y suficiente considerar el movimiento restringido a una sola dimensión. En este escenario, la partícula se desplaza siempre a lo largo de una línea recta, lo que nos permite asociar su trayectoria con uno de los ejes del sistema cartesiano de coordenadas, típicamente el eje $x$ o el eje $y$.  
+
+Esta simplificación es clave, pues reduce la descripción del movimiento a una única componente para cada magnitud vectorial. Por ejemplo, la dirección del vector velocidad ya no se expresa en términos de coordenadas espaciales, sino que queda determinada por su signo: un valor positivo indica movimiento en un sentido (por ejemplo, hacia la derecha en el eje $x$ o hacia arriba en el eje $y$), mientras que un valor negativo señala movimiento en la dirección opuesta. Esta notación nos permitirá abordar de manera más clara y sistemática el estudio de la cinemática en una dimensión.
+
+Para ilustrar la relación entre las cantidades físicas en una y en tres dimensiones, la siguiente tabla muestra una comparación entre ambas representaciones.
+
+\begin{table}
+    \centering
+    \begin{NiceTabular}{ccc}[hvlines-except-borders, cell-space-limits=4pt, rules={color=white,width=1pt}]
+        \CodeBefore
+        \rowcolor{mainc!80}{1}
+        \rowcolors{2}{mainc!30!white}{mainc!15!white}
+        \Body
+        \RowStyle[color=white]{}
+        \RowStyle{\ipn\selectfont\bfseries}Cantidad física & En $\RR$ & En $\RR[3]$ \\
+        Posición                & $x$                                  & $\vecr$ \\
+        Desplazamiento          & $\Deltax$                            & $\Deltar$ \\
+        Velocidad media         & $\bar{v} = \dfrac{\Deltax}{\Deltat}$ & $\velom = \dfrac{1}{\Deltat}\Deltar$ \\
+        Velocidad instantánea   & $v = \dfrac{d}{dt}x$                 & $\veloi = \dfrac{d}{dt}\vecr$ \\
+        Aceleración media       & $\bar{a} = \dfrac{\Deltav}{\Deltat}$ & $\acem = \dfrac{1}{\Deltat}\Delta\veloi$ \\
+        Aceleración instantánea & $a = \dfrac{d}{dt}v$                 & $\acei = \dfrac{d}{dt}\veloi$ \\
+    \end{NiceTabular}
+    \caption{Comparación de cantidades físicas en una y tres dimensiones.}
+    \label{tab:my_label}
+\end{table}
+
+Como se observa en la Tabla~\ref{tab:my_label}, las expresiones que describen las cantidades físicas en una dimensión tienen una analogía directa en tres dimensiones, donde los valores escalares se generalizan a vectores. En particular, la velocidad instantánea y la aceleración instantánea en tres dimensiones son los análogos vectoriales de sus respectivas definiciones en una dimensión.
+
+Entre los diferentes tipos de movimiento, uno de los más fundamentales es aquel en el que la velocidad permanece constante. Este caso particular, denominado movimiento rectilíneo uniforme (MRU), constituye el punto de partida para el estudio de la cinemática. A continuación, se formaliza su definición y se derivan sus ecuaciones de movimiento.
+
+\subsection{Movimiento Rectilíneo Uniforme (MRU)}
+
+El caso más sencillo de movimiento en una dimensión es aquel en el que la velocidad de la partícula permanece constante en el tiempo. Este tipo de movimiento, conocido como movimiento rectilíneo uniforme (MRU), constituye la base para el estudio de la cinemática, pues permite introducir conceptos fundamentales sin la complejidad añadida de aceleraciones o cambios de dirección. A continuación, formalizaremos su definición y derivaremos sus ecuaciones de movimiento.
+
+\begin{definition}{}{}
+    Decimos que una partícula tiene un \textbf{movimiento rectilíneo uniforme} cuando su vector de velocidad instantánea no cambia en el tiempo. Es decir
+    $$\veloi = \cte.$$
+\end{definition}
+\begin{figure}
+    \centering
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[tdplot_main_coords]
+        \coordinate (r0) at (1,-0.5,0.75);
+        \coordinate (r) at (0,2.5,2);
+        %
+        \coordinate (P1) at (1.15,-0.95,0.56);
+        \coordinate (P2) at (-0.17,3,2.21);
+        %
+        \draw[ejes] (O) -- (3.5,0,0) node[below] {$x$};
+        \draw[ejes] (O) -- (0,3,0) node[right] {$y$};
+        \draw[ejes] (O) -- (0,0,2) node[above] {$z$};
+        %
+        \draw[thick,gray] (P1) -- (P2);
+        %
+        \draw[vector,red] (r0) -- (0.8,0.1,1) node[midway,above] {$\veloi$};
+        %
+        \draw[vector,mainc] (O) -- (r0)
+            node[midway,below] {$\vecr_0$}
+            node[above left,name=t0] {\color{black}$(x_0,y_0,z_0)$}
+            node[above=-2mm of t0] {\color{black}$t_0=0$};
+        \draw[vector,darkc] (O) -- (r)
+            node[midway,below] {$\vecr$}
+            node[above left,name=tf] {\color{black}$(x,y,z)$}
+            node[above=-2mm of tf] {\color{black}$t_f=t$};
+        %
+        \foreach \x/\y/\z in {1/-0.5/0.75, 0/2.5/2} {
+            \filldraw[black] (\x,\y,\z) circle (0.5pt);
+        }
+    \end{tikzpicture}
+    \caption{Trayectoria de una partícula en MRU en $\RR[3]$.}
+    \label{fig:MRU_3D}
+\end{figure}
+
+Dado que un vector es constante si todas sus componentes son constantes, si $\veloi = v_x\veci+ v_y\,\vecj+ v_z\veck$, entonces $v_x$, $v_y$ y $v_z$ deben ser constantes. Esto implica que tanto la magnitud como la dirección del vector velocidad permanecen invariables en el tiempo.
+
+Si consideramos una partícula en movimiento rectilíneo uniforme en el espacio tridimensional cartesiano $\RR[3]$ (véase la Figura~\ref{fig:MRU_3D}), podemos analizar su trayectoria.
+
+En particular, podemos describir su movimiento analizando la evolución de su vector de posición en función del tiempo. La siguiente proposición establece formalmente la expresión para la posición de la partícula en cualquier instante de tiempo.\infoBulle{No es necesario escribir
+    $$\vecr = x\veci, \quad \veloi = v_x \veci \quad \text{y} \quad \acei = a_x \veci.$$
+    Su posición es $x$, su velocidad es $v = \dfrac{dx}{dt}$ y su aceleración es $a = \dfrac{dv}{dt}$, son números reales.
+}
+
+\begin{proposition}{}{}
+    Sea una partícula que se desplaza en el espacio tridimensional y cuya posición en un instante inicial $t_0 = 0$ está dada por  
+    $$\vecr_0 = x_0\veci + y_0\,\vecj + z_0\veck,$$
+    donde $x_0, y_0, z_0$ son constantes conocidas. Si transcurre un intervalo de tiempo $\Deltat = t - t_0 = t$, entonces la posición de la partícula en el instante $t$ está dada por  
+    $$\vecr = x\veci + y\vecj + z\veck,$$
+    donde $x, y, z$ representan las coordenadas de la partícula en función del tiempo.
+    \vspace{2mm}
+    \begin{demo}
+        Sea $\vecr(t)$ la posición de una partícula en el espacio tridimensional en función del tiempo $t$. De acuerdo con la \refdef{velocidad_instantanea}, la velocidad instantánea está dada por
+        $$\veloi = \frac{d}{dt}\vecr = \frac{dx}{dt}\veci + \frac{dy}{dt}\vecj + \frac{dz}{dt}\veck.$$
+        De esta expresión se obtiene que las componentes de la velocidad están determinadas por
+        $$v_x = \frac{dx}{dt}, \quad v_y = \frac{dy}{dt} \quad \text{y} \quad v_z = \frac{dz}{dt}.$$
+        Esto nos proporciona un sistema de tres ecuaciones diferenciales ordinarias de primer orden. Procedemos a resolver la ecuación diferencial para la coordenada $x$; las soluciones para $y$ y $z$ se obtienen de manera análoga.
+    
+        La ecuación diferencial de $x$ puede reescribirse en forma diferencial como
+        $$dx = v_x dt.$$
+        Integrando en el intervalo correspondiente, desde la posición inicial hasta la posición final, se obtiene
+        $$\int_{x_0}^{x} dx = \int_{t_0}^{t} v_x \, dt.$$
+        Dado que se asume que la velocidad $v_x$ es constante y que el tiempo inicial es $t_0 = 0$, la integral en el lado derecho se resuelve directamente, resultando en
+        $$x - x_0 = v_x t,$$
+        que equivale a
+        $$x = x_0 + v_x t.$$
+        Aplicando el mismo procedimiento a las ecuaciones diferenciales de $y$ y $z$, se obtiene
+        $$y = y_0 + v_y t, \quad z = z_0 + v_z t.$$
+        Estas ecuaciones representan las ecuaciones paramétricas de una recta en el espacio tridimensional cartesiano; cada una de ellas describe una línea en los planos $x(t)$, $y(t)$ y $z(t)$, respectivamente.  
+    
+        De manera compacta, el vector de posición se puede expresar como
+        $$\vecr = (x_0 + v_x t)\veci + (y_0 + v_y t)\vecj + (z_0 + v_z t)\veck,$$
+        o, de manera equivalente,
+        $$\vecr = \vecr_0 + \veloi t.$$
+        Finalmente, despejando $\veloi$, se obtiene que
+        $$\veloi = \frac{1}{t} (\vecr - \vecr_0) = \frac{1}{\Deltat} \Deltar = \velom.$$
+        Por lo tanto, cuando la velocidad instantánea es constante, coincide con la velocidad media, y esta igualdad se verifica únicamente en dicho caso.
+    \end{demo}
+\end{proposition}
+
+Galileo Galilei realizó varios experimentos y observaciones sobre el movimiento de los cuerpos y llegó a la conclusión de que; en ausencia de agentes externos, el movimiento natural de todos los cuerpos es el movimiento rectilíneo uniforme.
+
+Si en la Figura~\ref{fig:MRU_3D} giramos y trasladamos de manera adecuada los ejes cartesianos para hacer coincidir el eje $x$ con la trayectoria recta de la partícula, obtenemos una descripción más sencilla del movimiento. En este nuevo sistema, los vectores de posición, velocidad y aceleración poseen únicamente componente $x$. Esta simplificación no solo facilita el análisis del movimiento, sino que también sienta las bases para el estudio de fenómenos como la caída libre, en la que la aceleración (debida a la gravedad) se comporta de forma constante.
+
+\subsection{Movimiento Rectilíneo Uniformemente Acelerado (MRUA)}
+
+Para formalizar este comportamiento, introducimos la siguiente definición.
+
+\begin{definition}{}{}
+    Decimos que una partícula tiene un \textbf{movimiento rectilíneo uniformemente acelerado} cuando su vector de aceleración instantánea no cambia en el tiempo. Es decir,
+    $$\acei = \cte.$$
+\end{definition}
+
+Con esta definición en mente, es pertinente examinar cómo varía la velocidad de una partícula en un MRUA. Así, la siguiente proposición establece la relación fundamental entre la velocidad y el tiempo.
+
+\begin{proposition}{}{}
+    Sea una partícula en movimiento rectilíneo con aceleración constante $a$. Entonces, su velocidad en función del tiempo $v(t)$ está dada por
+    $$v(t) = v_0 + at,$$
+    donde $v_0$ es la velocidad inicial en $t = 0$.
+    \vspace{2mm}
+    \begin{demo}
+        En una dimensión, la aceleración instantánea está definida como
+        $$a = \frac{dv}{dt}.$$
+        Así, al despejar $dv$, se obtiene
+        $$dv = a \, dt.$$
+        Integrando ambos lados desde la velocidad inicial $v_0$, en el tiempo inicial $t_0$, hasta la velocidad final $v$, en el tiempo final $t$:
+        \begin{align*}
+            \int_{v_0}^v dv &= \int_{t_0}^{t} a \, dt. \\
+            v - v_0 &= a (t - t_0).
+        \end{align*}
+        Si tomamos $t_0 = 0$, obtenemos la ecuación y despejando a $v$:
+        $$v = v_0 + at.$$
+        
+        Por lo tanto, $v = v_0 + at$. Esto implica que, en el movimiento rectilíneo uniformemente acelerado (MRUA), la velocidad instantánea de la partícula es una función lineal del tiempo.
+    \end{demo}
+\end{proposition}
+
+Si hacemos la gráfica de la velocidad contra la posición tenemos algo similar a la Figura~\ref{fig:MRUA_2D}. Una vez establecida la relación entre velocidad y tiempo, resulta natural avanzar al análisis de la posición de la partícula. La integración de la velocidad nos permite determinar cómo evoluciona la posición a lo largo del tiempo. Llevándonos de forma natural a la siguiente:
+
+\begin{proposition}{}{}
+    Sea $x(t)$ la posición de un objeto en función del tiempo y supongamos que su aceleración $a$ es constante. Entonces, la ecuación que describe la posición del objeto está dada por
+    $$x = x_0 + v_0 t + \frac{1}{2} a t^2.$$
+    \begin{demo}
+        Dado que la velocidad es la derivada de la posición respecto al tiempo, se tiene
+        $$v = \frac{dx}{dt}.$$
+        Bajo la hipótesis de aceleración constante, la ecuación diferencial que rige el movimiento es
+        $$\frac{dx}{dt} = v_0 + at.$$
+        Separando variables, se sigue
+        $$dx = (v_0 + at) \, dt.$$
+        Integrando ambos lados desde la posición inicial $x_0$ hasta la posición final $x$, y desde $t_0 = 0$ hasta $t_f = t$, tenemos
+        \begin{align*}
+            \int_{x_0}^{x} dx & = \int_0^t (v_0 + at) \, dt. \\
+            x - x_0 & = v_0 t + \frac{1}{2} a t^2. &&\text{integrando}
+        \end{align*}
+        Finalmente, despejando $x$, se concluye que
+        $$x = x_0 + v_0 t + \frac{1}{2} a t^2.$$
+        
+        Es decir, la función de posición es una parábola en el plano posición-tiempo $(x, t)$, lo que implica un MRUA (véase la Figura~\ref{fig:posicion_MRUA}).
+    \end{demo}
+\end{proposition}
+
+Los resultados presentados en esta subsección consolidan nuestra comprensión del movimiento rectilíneo uniformemente acelerado. Además, constituyen la base teórica para abordar la caída libre, en la que la aceleración constante es proporcionada por la gravedad. A continuación, se explorará cómo estas ecuaciones se aplican a la caída libre, permitiéndonos describir con precisión el comportamiento de los cuerpos en ese régimen de movimiento.\sideFigure[\label{fig:MRUA_2D}La figura muestra el comportamiento de un movimiento rectilíneo uniformemente acelerado (MRUA), donde la posición $x$ varía linealmente con el tiempo $t$, considerando una velocidad inicial $v_0$.]{
+    \begin{tikzpicture}[scale=0.72]
+        \draw[ejes] (-0.25,0) -- (4,0) node[below] {$t$};
+        \draw[ejes] (0,-0.25) -- (0,4) node[left] {$x$};
+        \draw[recta,mainc] (0,1) node[left] {$v_0$} -- (4,3.5);
+    \end{tikzpicture}
+}\sideFigure[\label{fig:posicion_MRUA}Posición en Movimiento Rectilíneo Uniformemente Acelerado (MRUA)]{
+    \begin{tikzpicture}[scale=0.62]
+        \draw[ejes] (0,0) -- (5,0) node[below] {$t$};
+        \draw[ejes] (0,0) -- (0,5) node[left] {$x$};
+        \draw[domain=0:4.8283137373023,smooth,variable=\x,recta,mainc] plot ({\x},{exp(\x/3)});
+    \end{tikzpicture}
+}
+
+\subsubsection{Caída libre}
+
+Un ejemplo típico de MRUA es la caída libre, sin rozamiento, de un objeto pequeño, por ejemplo, una canica.
+\begin{example}{}{}
+    Imaginemos que desde la Torre Mayor1 ubicada en la avenida paseo de la reforma en la CDMX, una persona deja caer una canica desde una altura de 200 metros.
+    \vspace{2mm}
+    \begin{solucion}
+        Queremos calcular en tiempo que tarda en llegar al suelo y la velocidad con la cual lo golpea. Antes de empezar a escribir ecuaciones o fórmulas, lo primero que debemos hacer es definir muy bien nuestro sistema de referencia. En este caso, si despreciamos el rozamiento con el aire, el movimiento ideal de la canica es un MRUA a lo largo de una línea vertical. La canica es acelerada hacia el suelo por su propio peso, la fuerza de atracción gravitacional que ejerce la Tierra sobre ella. Entonces tomaremos como eje cartesiano, de nuestro sistema de referencia, al eje y que es por costumbre el eje vertical. Colocaremos el origen de nuestro sistema de referencia en el suelo ($y = 0$). Por lo tanto, la posición de la canica, como función del tiempo; es decir, su altura $y = y(t)$ esta dada por
+        $$y = y_0 + v_0t + \frac{1}{2}at^2,$$
+        donde $y_0 = 200$m es su posición inicial, la altura desde donde se va a dejar caer, $v_0 = 0$ es su velocidad inicial, en la caída libre el objeto parte del reposo, y $a = −g$, donde $g = 9.8\,\text{m/s}^2$ es la aceleración causada por la fuerza de gravedad, el peso, cerca de la superficie de la Tierra, la cual se dirige hacia el centro de la Tierra, es decir el vector aceleración apunta hacia abajo y por eso el signo menos, como vector, la aceleración de la gravedad se escribe como $\veca = −g\vecj$. Por lo tanto, la altura de la canica como función del tiempo es
+        $$y = y_0 − \frac{1}{2}gt^2$$
+        
+        Si la derivamos respecto al tiempo, su velocidad instantánea es
+        $$v = −gt$$
+        De la primera ecuación, cuando y = 0, el tiempo que tarda en caer la canica es
+        $$t = \frac{\sqrt{2(y_0)}}{g} = \frac{2(200\,\text{m})}{9.8\,\text{m/s}^2} = 6.39\,\text{s}$$
+        Y la velocidad con la cual golpea el piso es
+        $$v = −gt = −(9.8 m/s^2)(6.39s) = −62.62\text{m/s}$$
+        
+        Lo cual equivale a -225.44 km/h, el signo menos indica que la dirección de movimiento es hacia abajo.
+    \end{solucion}
+\end{example}
+
+\subsubsection{Lanzamiento vertical}
+
+El lanzamiento vertical constituye un caso particular del movimiento rectilíneo uniformemente acelerado (MRUA). A diferencia de la caída libre, en este tipo de movimiento la velocidad inicial no es nula. Un objeto de pequeñas dimensiones, como una canica modelada como partícula puntual, puede ser impulsado tanto hacia arriba como hacia abajo con una velocidad inicial distinta de cero. Un ejemplo adicional es el de un proyectil disparado verticalmente por un arma de fuego.
+
+La ecuación que describe la altura del proyectil en función del tiempo es
+$$y = y_0 + v_{0y}t - \frac{1}{2}gt^2.$$
+
+Si se grafica la posición en función del tiempo, se observa una trayectoria parabólica cóncava hacia abajo, lo que se debe a que el coeficiente del término cuadrático es negativo, reflejando la dirección descendente de la aceleración gravitacional.
+
+La altura máxima alcanzada por el proyectil se determina al encontrar el máximo de la función anterior. Para ello, se deriva la expresión de la posición respecto del tiempo e igualamos a cero:
+$$v_y = \frac{dy}{dt} = v_{0y} - gt.$$
+
+El proyectil alcanza su altura máxima cuando su velocidad se anula, es decir,
+$$0 = v_{0y} - gt_{\max},$$
+de donde se despeja el tiempo en el que esto ocurre
+$$t_{\max} = \frac{v_{0y}}{g}.$$
+
+\begin{proposition}{}{}
+    La altura máxima alcanzada por un proyectil lanzado verticalmente con velocidad inicial $v_{0y}$ desde una posición inicial $y_0$ está dada por
+    $$y_{\max} = y_0 + \frac{v_{0y}^2}{2g}.$$
+    \dem Sustituyendo $t_{\max}$ en la ecuación de la posición
+        \begin{align*}
+            y_{\max} & = y_0 + v_{0y}t_{\max} - \frac{1}{2}g t_{\max}^2 \\
+            & = y_0 + v_{0y}\left(\frac{v_{0y}}{g}\right) - \frac{1}{2}g \left(\frac{v_{0y}}{g}\right)^2 \\
+            & = y_0 + \frac{v_{0y}^2}{g} - \frac{1}{2} \frac{v_{0y}^2}{g} \\
+            & = y_0 + \frac{v_{0y}^2}{2g}.
+        \end{align*}
+        Por lo tanto, la altura máxima está dada por:
+        \begin{equation*}
+            y_{\max} = y_0 + \frac{v_{0y}^2}{2g}. \tag*{\BlackSquare}
+        \end{equation*}
+\end{proposition}
+
+El estudio del lanzamiento vertical nos permite comprender el comportamiento de un objeto que se mueve únicamente bajo la acción de la gravedad. Sin embargo, muchos fenómenos en la naturaleza y en aplicaciones tecnológicas involucran trayectorias más complejas que las rectilíneas.
+
+\section{Cinemática del movimiento en el plano}
+
+Para avanzar en el análisis del movimiento en dos dimensiones, pasamos ahora a examinar el caso del movimiento en el plano, en particular, el movimiento circular, donde las aceleraciones y velocidades cambian tanto en magnitud como en dirección.
+
+\subsection{Movimiento circular}
+
+Consideremos una partícula en el plano cartesiano $XY$ que tiene un movimiento circular, girando en torno al origen, en el sentido contrario de las manecillas del reloj. Es decir, la trayectoria de esta partícula es una circunferencia de radio $r$ con centro en el origen $(0,0)$ (veáse la Figura~\ref{fig:trayectoria}).
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\tvalA}{acos(2.1213203435596/3)}
+        \pgfmathsetmacro{\yvalA}{3*sin(\tvalA)}
+        %
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (2.1213203435596,\yvalA);
+        \coordinate (B) at (2.1213203435596,0);
+        %
+        \draw[ejes] (-3.5,0) -- (3.5,0) node[below] {$x$};
+        \draw[ejes] (0,-3.5) -- (0,3.5) node [left] {$y$};
+        %
+        \draw[domain=0:360,samples=100,smooth,variable=\t,thick]
+            plot ({3*cos(\t)},{3*sin(\t)});
+        %
+        \draw[linea punteada] (B) -- (A) node[anchor=south west] {\color{black}$(x,y)$} -- (0,\yvalA);
+        %
+        \draw[vector,red] (A) -- (0.5,3.7426406871193) node[midway,above right] {$\veloi$};
+        %
+        \draw[vector,mainc] (O) -- (A) node[midway,above left] {$\vecr$};
+        %
+        \draw pic[-stealth,"$\theta$",draw=black,thick,angle radius=22,angle eccentricity=1.3] {angle=B--O--A};
+    \end{tikzpicture}
+    \caption{Representación de la trayectoria circular de una partícula en el plano $XY$. Se observa la circunferencia de radio $r$ con centro en el origen, el vector posición $\vecr$ dirigido hacia el punto $(x,y)$, el vector velocidad $\veloi$ tangente a la trayectoria, y el ángulo $\theta$ medido desde el eje $x$.}
+    \label{fig:trayectoria}
+\end{figure}
+
+El vector de posición de esta partícula $\vecr = x\veci+ y\vecj$, mostrado en la figura, forma un ángulo $\theta$ con el eje $x$, de tal manera que las componentes $x$ y $y$ pueden expresarse como una función del ángulo $\theta$, por medio de las funciones trigonométricas coseno y seno, respectivamente; a su vez, el ángulo $\theta$ es una función continua y además diferenciable del tiempo.
+$$x = r\cos\theta \quad \text{y} \quad y = r\sen\theta.$$
+
+Resulta entonces más conveniente estudiar el movimiento circular en un sistema de coordenadas distinto al cartesiano, llamado \textbf{sistema polar}, o \textbf{sistema de coordenadas polares}, $(r, \theta)$. En este sistema polar tendremos un eje radial, o eje $r$, el cual es una recta que parte del origen cartesiano $(0,0)$ y pasa por la posición de la partícula; mientras que el otro eje, que podríamos llamar \textbf{eje angular} o eje $\theta$, parte de la posición de la partícula, en donde tendremos el origen de este nuevo sistema, y tiene como dirección positiva la dirección del vector velocidad instantánea.
+
+Es decir, los ejes polares $r$ y $\theta$, son perpendiculares entre sí, igual como lo son los ejes cartesianos, pues el eje radial apunta en la dirección del vector de posición $\vecr$, mientras el eje angular apunta en la dirección del vector velocidad $\veloi$, y sabemos que estos vectores son perpendiculares. De hecho, una forma fácil de demostrarlo sería la siguiente:
+\begin{proposition}{}{}
+    Sea la posición de una partícula en el plano expresada en coordenadas polares por
+    $$\vecr = r\cos\theta\,\veci + r\sen\theta\,\vecj,$$
+    y sea su velocidad definida por $\veloi = \frac{d\vecr}{dt}$. Entonces, si $\veloi$ se obtiene mediante la derivación temporal de $\vecr$, se tiene que la dirección del vector posición es perpendicular a la dirección del vector velocidad; es decir, los ejes $r$ y $\theta$ son ortogonales.
+    \vspace{2mm}
+    \begin{demo}
+        Sea el vector de posición expresado en coordenadas polares:
+        $$\vecr = r\cos\theta\,\veci + r\sen\theta\,\vecj.$$
+        Derivando implícitamente con respecto al tiempo se obtiene el vector velocidad:
+        $$\veloi = \frac{d\vecr}{dt} = -r\sen\theta\,\frac{d\theta}{dt}\,\veci + r\cos\theta\,\frac{d\theta}{dt}\,\vecj.$$
+        El producto escalar de $\vecr$ y $\veloi$ es, por tanto,
+        $$\vecr \cdot \veloi = -r^2\sen\theta\cos\theta\frac{d\theta}{dt} + r^2\sen\theta\cos\theta\frac{d\theta}{dt} = 0$$
+        Por otra parte, considerando la definición del producto escalar en términos del ángulo $\varphi$ entre $\vecr$ y $\veloi$, se tiene que
+        $$\vecr\cdot\veloi = \|\vecr\|\,\|\veloi\|\cos\varphi.$$
+        Dado que $|\vecr|$ y $|\veloi|$ son distintos de cero, se concluye que $\cos\varphi=0$. Por lo tanto, queda demostrado que los vectores $\vecr$ y $\veloi$ son ortogonales.
+    \end{demo}
+\end{proposition}
+
+En la Figura~\ref{fig:coordenadas_polares} mostramos los nuevos ejes coordenados, así como sus vectores básicos $\vecu_r$ y $\vecu_\theta$.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\tvalA}{acos(2.1213203435596/3)}
+        \pgfmathsetmacro{\yvalA}{3*sin(\tvalA)}
+        % Coordenadas
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (2.1213203435596,\yvalA);
+        \coordinate (B) at (2.1213203435596,0); % (0.5,0) (0,0.5)
+        \coordinate (C) at (1,3.2426406871193);
+        \coordinate (D) at (0.2426406871193,4);
+        \coordinate (E) at (4,4);
+        % Ejes
+        \draw[ejes] (-4,0) -- (4,0) node[below] {$x$};
+        \draw[ejes] (0,-4) -- (0,4) node [left] {$y$};
+        % Parametrización del círculo
+        \draw[domain=0:360,samples=100,smooth,variable=\t,thick]
+            plot ({3*cos(\t)},{3*sin(\t)});
+        % Líneas punteadas del punto A
+        \draw[linea punteada] (B) -- (A) -- (0,\yvalA);
+        % Vector de theta
+        \draw[vector,darkc] (A) -- (D) node[above] {$\theta$};
+        % Vector velocidad
+        \draw[vector,red] (A) -- (C) node[above right] {$\veloi$};
+        % Vector de r
+        \draw[vector,darkc] (A) -- (E) node[above] {$r$};
+        % Vector posición
+        \draw[vector,mainc] (O) -- (A) node[midway,above left] {$\vecr$};
+        % Ángulo
+        \draw[thin] pic[-stealth,"$\theta$",draw=black,thick,angle radius=22,angle eccentricity=1.3] {angle=B--O--A};
+        % Vectores canónicos
+        \draw[vector,orange] (O) -- (0.75,0) node[midway,below] {$\veci$};
+        \draw[vector,orange] (O) -- (0,0.75) node[midway,left] {$\vecj$};
+        % Vectores unitarios de u
+        \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596-0.5,\yvalA+0.5)
+            node[left] {$\vecu_\theta$};
+        \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596+0.5,\yvalA+0.5)
+            node[midway,below right] {$\vecu_r$};
+    \end{tikzpicture}
+    \caption{Diagrama en coordenadas polares que muestra la posición de la partícula sobre la circunferencia, junto a la representación de los vectores del sistema: el vector posición $\vecr$, el vector velocidad $\veloi$, los ejes cartesianos $\veci$ y $\vecj$, y los vectores unitarios polares $\vecu_r$ y $\vecu_\theta$.}
+    \label{fig:coordenadas_polares}
+\end{figure}
+
+Los vectores básicos del nuevo sistema polar de coordenadas $\vecu_r$ y $\vecu_\theta$ son vectores unitarios paralelos a los vectores $\vecr$ y $\veloi$ respectivamente. Para escribirlos en función de los vectores básicos del sistema de coordenadas cartesianas $\veci$ y $\vecj$ usaremos el siguiente resultado.
+\begin{theorem}{}{}
+    Asociado a todo vector $\veca$, distinto del vector cero $\vecce$, existe un vector unitario $\auni$ que es paralelo a él. Este vector es
+    $$\auni = \frac{1}{a}\veca.$$
+    \begin{demo}
+        Sea $\veca = a_x\veci + a_y\vecj + a_zk\veck$ cualquier vector distinto del vector cero, el producto del inverso de su magnitud $\frac{1}{a}$ por el vector $\veca$ es
+        $$\frac{1}{a}\veca = \frac{1}{a}a_x\veci + \frac{1}{a}a_y\,\vecj + \frac{1}{a}a_z\veck$$
+        Su magnitud es
+        $$\left|\frac{1}{a}\veca\right| = \sqrt{\left(\frac{1}{a}a_x\right) + \left(\frac{1}{a}a_y\right) + \left(\frac{1}{a}a_z\right)} = \frac{1}{a}\sqrt{a_x^2 + a_y^2 + a_z^2} = 1.$$
+        Por lo tanto, queda demostrado que el vector $\auni = \dfrac{1}{a}\veca$ es unitario.
+    \end{demo}
+\end{theorem}
+
+De acuerdo con este teorema, los \textbf{vectores básicos} del sistema de coordenadas polares son
+$$\vecu_r =  \runi = \frac{1}{r}\vecr = \frac{1}{r}(r\cos\theta\veci + r\sen\theta\vecj) = \cos\theta\veci + \sen\theta\vecj$$
+y
+$$\velou\theta = \thetau = \frac{1}{v}\veloi = \frac{1}{r}\left(-r\sen\theta\frac{d\theta}{dt}\veci + r\cos\theta\frac{d\theta}{dt}\vecj\right)$$
+
+Nos detenemos un momento, y hacemos un paréntesis para definir, un concepto muy importante de
+la física que es la \textbf{velocidad angular}, definida como
+\begin{definition}{}{}
+    Se denomina \textbf{velocidad angular} a la derivada temporal del ángulo de posición $\theta$, es decir,
+    \begin{equation*}
+        \omega = \frac{d\theta}{dt}.
+    \end{equation*}
+    La velocidad angular es una magnitud escalar que cuantifica la rapidez con la que varía el ángulo de posición en el tiempo.
+\end{definition}
+
+De acuerdo con esta definición, podemos escribir el vector velocidad como
+$$\veloi = -r\omega\sen\theta\veci + r\omega\sen\theta\vecj$$
+Cuya magnitud es
+$$v = |\veloi| = \sqrt{(-r\omega\sen\theta)^2 + (r\omega\sen\theta)^2} = r|\omega|$$
+
+En nuestro caso el ángulo $\theta$, que ahora con nuestro nuevo sistema de coordenadas llamaremos
+posición angular, es una función monótona creciente; por lo tanto, su derivada $\omega$ es positiva y
+entonces
+$$v = r\omega$$
+Expresado en palabras: La rapidez de la partícula con movimiento circular es igual al radio de su trayectoria circular multiplicado por su velocidad angular. Regresando al vector ûθ, tenemos
+$$\velou_\theta = \frac{1}{v}\veloi = \frac{1}{v}(-r\omega\sen\theta\veci + r\omega\sen\theta\vecj) = -\sen\theta\veci + \cos\theta\vecj.$$
+Claramente vemos que la magnitud de los vectores $\velou_r$ y $\velou_\theta$ es igual a uno, pues
+$$\sqrt{\cos^2\theta + \sen^2\theta} = 1$$
+
+La ventaja de estudiar el movimiento circular en el sistema de coordenadas polares es que ahora nuestros vectores de posición y de velocidad se pueden escribir de una manera más simple
+$$\vecr = r\velou_r \quad \text{y} \quad \veloi = v\velou_\theta.$$
+Es decir, ahora solamente tienen una componente; la posición solo tiene componente radial y la velocidad solo tiene componente angular. ¿Qué pasa con la aceleración de la partícula?
+
+Por definición, la aceleración de la partícula es:
+$$\acei = \frac{d}{dt}\veloi = \frac{d}{dt}(-r\omega\sen\theta) + \frac{d}{dt}(r\omega\cos\theta)\vecj.$$
+Realizando las derivadas de las componentes
+$$\acei = \left(-r\frac{d\omega}{dt}\sen\theta - r\omega\cos\theta\frac{d\theta}{dt}\right)\veci + \left(r\frac{d\omega}{dt}\cos\theta - r\omega\sen\theta\frac{d\theta}{dt}\right)\vecj.$$
+
+Nos detenemos nuevamente para definir la aceleración angular como la derivada de la \textbf{velocidad angular} respecto al tiempo, esto es
+\begin{definition}{}{}
+    Se llama \textbf{aceleración angular} a la derivada temporal de la velocidad angular $\omega$, es decir,
+    \begin{equation*}
+        \alpha = \frac{d\omega}{dt}.
+    \end{equation*}
+    La aceleración angular es una magnitud escalar que describe la rapidez con la cual cambia la velocidad angular con respecto al tiempo.
+\end{definition}
+Entonces
+$$\acei = (-r\alpha\sen\theta + r\omega^2\cos\theta)\veci + (r\alpha\cos\theta - r\omega^2\sen\theta)\vecj$$
+O bien
+$$\acei = r\alpha (-\sen\theta\veci + \cos\theta\vecj) - r\omega^2(\cos\theta\veci + \sen\theta\vecj).$$
+Observando que los paréntesis son los vectores básicos unitarios $\velou_\theta$ y $\velou_r$, finalmente escribimos la aceleración como
+$$\acei = -r\omega^2\velou_r + r\alpha\velou_\theta$$
+Es decir, la aceleración tiene dos componentes:
+\begin{enumerate}[label=\emph{\roman*)}]
+    \item La componente radial $\acei_r = -r\omega^2\velou_r$, de magnitud $\acei_r = r\omega^2$.
+    \item La componente angular $\acei_\theta = r\alpha\velou_\theta$, de magnitud $\acei_\theta = r\alpha$.
+\end{enumerate}
+Nótese que la \textbf{componente radial} de la aceleración tiene un sentido opuesto al vector ûr debido al signo menos; es decir la componente radial apunta siempre hacia el centro de la trayectoria circular, por esta razón también se le conoce como \textbf{aceleración centrípeta}. Su magnitud también se puede expresar en función de la rapidez de traslación $v$ como
+$$a_r = r\omega^2 = r\left(\frac{v}{r}\right)^2 = \frac{v^2}{r}.$$
+
+Como veremos más adelante, esta componente de la aceleración es causada por una fuerza dirigida hacia el centro de la trayectoria, llamada fuerza centrípeta. Nuestro planeta, La Tierra, se mueve en el espacio en una orbita que es casi una circunferencia y esto se debe a la fuerza de atracción gravitacional que ejerce el Sol sobre ella.
+
+La otra componente, la \textbf{componente angular}, también llamada \textbf{componente tangencial}, por razones obvias, es tangente a la trayectoria; puede verse como la derivada respecto al tiempo de la expresión
+$$v = r\omega$$
+Esto es
+$$a_\theta = \frac{d}{dt}(r\omega) = r\frac{d\omega}{dt} = r\alpha.$$
+
+En lo siguiente también podremos usar los subíndices C y T para la componente de la aceleración radial o centrípeta y para la componente de la aceleración angular o tangencial, respectivamente; es decir
+$$a_r = a_C \quad \text{y} \quad a_\theta = a_T.$$
+
+Ilustramos las componentes centrípeta y tangencial de la aceleración en la Figura~\ref{fig:descomposicion_aceleracion}.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\tvalA}{acos(2.1213203435596/3)}
+        \pgfmathsetmacro{\yvalA}{3*sin(\tvalA)}
+        % Coordenadas
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (2.1213203435596,\yvalA);
+        \coordinate (B) at (2.1213203435596,0); % (0.5,0) (0,0.5)
+        \coordinate (C) at (1,3.2426406871193);
+        \coordinate (D) at (0.2426406871193,4);
+        \coordinate (E) at (4,4);
+        % Ejes
+        \draw[ejes] (-4,0) -- (4,0) node[below] {$x$};
+        \draw[ejes] (0,-4) -- (0,4) node [left] {$y$};
+        % Parametrización del círculo
+        \draw[domain=0:360,samples=100,smooth,variable=\t,thick]
+            plot ({3*cos(\t)},{3*sin(\t)});
+        % Líneas punteadas del punto A
+        \draw[linea punteada] (B) -- (A) -- (0,\yvalA);
+        % Vector de theta
+        \draw[vector,darkc] (A) -- (D) node[above] {$\theta$};
+        % Vector a_r
+        \draw[vector,red] (A) -- (C) node[above right] {$\veca_r$};
+        % Vector de r
+        \draw[vector,darkc] (A) -- (E) node[above] {$r$};
+        % Vector posición
+        \draw[vector,mainc] (O) -- (A) node[midway,below right] {$\vecr$};
+        % Ángulo
+        \draw pic[-stealth,"$\theta$",draw=black,thick,angle radius=22,angle eccentricity=1.3] {angle=B--O--A};
+        % Vectores unitarios de u
+        \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596-0.5,\yvalA+0.5)
+            node[left] {$\vecu_\theta$};
+        \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596+0.5,\yvalA+0.5)
+            node[midway,below right] {$\vecu_r$};
+        % Vector a_c
+        \draw[vector,red] (2.1213203435596,\yvalA) -- (2.1213203435596-1,\yvalA-1)
+            node[midway,above left] {$\veca_c$};
+    \end{tikzpicture}
+    \caption{Descomposición de la aceleración en un movimiento circular. Se distinguen las dos componentes: la aceleración tangencial, representada por $\veca_r$, y la aceleración centrípeta, representada por $\veca_c$, ilustrando la separación vectorial de la aceleración total en sus direcciones tangencial y radial.}
+    \label{fig:descomposicion_aceleracion}
+\end{figure}
+
+Hemos demostrado cómo, al utilizar el sistema de coordenadas polares, la descripción del movimiento circular se simplifica considerablemente. La posición se expresa únicamente en términos del radio y la velocidad se relaciona directamente con la velocidad angular, permitiéndonos identificar de forma clara las componentes de la aceleración.
+
+Con los conceptos desarrollados sobre el movimiento circular, la descomposición de las magnitudes vectoriales y la utilización de coordenadas polares, podemos abordar fenómenos más complejos. En la siguiente subsección se analizará el lanzamiento de un proyectil, donde la combinación de la velocidad inicial, el ángulo de lanzamiento y la aceleración de la gravedad determinan la trayectoria parabólica del cuerpo. Esta transición nos permitirá aplicar los principios de la cinemática vistos hasta ahora a situaciones de interés en la física.
+
+\subsection{Lanzamiento de un proyectil}
+
+Otro caso típico de movimiento en dos dimensiones, que es tratado en los libros de física, cuando se estudia la cinemática de una partícula, es el movimiento de un proyectil.
+
+\begin{example}{}{}
+    Un proyectil será para nosotros un objeto pequeño (una partícula) que es lanzado (disparado) desde una posición inicial, en la cual colocaremos el origen de nuestro sistema de referencia, de modo que el eje cartesiano $x$ sea el eje horizontal y el eje $y$ el eje vertical. En la siguiente figura se muestra la trayectoria de un balón de futbol pateado desde el origen con un ángulo de elevación de $45^\circ$ (el ángulo que forma el vector velocidad inicial $V_0$ con el eje $x$). El movimiento del proyectil se da en el plano vertical $XY$, si suponemos que no existen corrientes de aire, ni rozamiento. En la siguiente figura se muestra la trayectoria parabólica de un balón de futbol disparado con una velocidad de 210.8 km/h (60.23 m/s) (Récord Guinness del brasileño Ronny Heberson, 26 nov. 2006).
+    \begin{figure}
+        \centering
+        
+        \caption{Caption}
+        \label{fig:enter-label}
+    \end{figure}
+    \begin{solucion}
+        El movimiento de un proyectil puede verse como la combinación de dos movimientos:
+        \begin{enumerate}[label=\emph{\roman*)}]
+            \item A lo largo de la horizontal, no tenemos ninguna fuerza que actúe sobre el proyectil, por lo tanto, la componente $x$ de la posición obedece a un MRU. Es decir,
+            $$x = x_0 + v_{0x}t$$
+            \item A lo largo de la vertical, el proyectil siente la fuerza de gravedad, su peso $W = mg$, por lo cual tendrá la aceleración de la gravedad, esto es el equivalente a un lanzamiento vertical, por lo cual la componente y de la posición obedece a un MRUA. Es decir,
+            $$y = y_0 + v_{0y}t − \frac{1}{2}gt^2$$
+        \end{enumerate}
+        
+        Como antes mencionamos, la posición inicial del proyectil, en el momento justo del disparo es el origen, por lo tanto, nuestras ecuaciones paramétricas de la posición nos quedan como
+        $$x = v_{0x}t \quad \text{y} \quad y = v_{0y} - \frac{1}{2}gt^2.$$
+        
+        Tomando en cuanta que la velocidad inicial del proyectil es decir la velocidad de disparo es
+        $$\veloi_0 = v_{0x}\veci + v_{0y}\,\vecj = v_0\cos\theta\,\veci + v_0\sen\theta\,\vecj.$$
+        Entonces las ecuaciones paramétricas nos quedan como
+        $$x = v_0\cos\theta t \quad \text{y} \quad y = v_0\sen\theta t − \frac{1}{2}gt^2$$
+        
+        Que son las ecuaciones paramétricas de la parábola de la figura. Entonces el vector de posición del proyectil es
+        $$\vecr = v_0\cos\theta t \,\veci + \left(v_0\sen\theta - \frac{1}{2}gt^2\right)\vecj$$
+        
+        Y su velocidad instantánea
+        $$\veloi = v_0\cos\theta\,\veci + (v_0\sen\theta - gt)\vecj.$$
+        
+        Despejando al tiempo de la primera ecuación y sustituyendo en la segunda obtenemos
+        \begin{align*}
+            y & = v_0\sen\theta\left(\frac{x}{v_0\cos\theta}\right) - \frac{1}{2}g\left(\frac{x}{v_0\cos\theta}\right)^2 \\
+            & = (\tan\theta)x - \left(\frac{g}{2v_0^2\cos^2\theta}\right)x^2
+        \end{align*}
+        
+        Que es la ecuación de la trayectoria parabólica, en el plano $XY$, graficada en la figura anterior. Para determinar la altura máxima $y_{\max}$ alcanzada por el proyectil, igualamos a cero la componente y de la velocidad
+        $$v_y = v_0\sen\theta − gt_{\max} = 0$$
+        donde hemos llamado tmax al tiempo en el cual el proyectil alcanza su máxima altura. Entonces
+        $$t_{\max} = \frac{v_0\sen\theta}{g}.$$
+        Sustituyendo en la ecuación paramétrica de la componente y, de la posición tenemos la altura máxima
+        \begin{align*}
+            y_{\max} & = v_0\sen\theta t_{\max} - \frac{1}{2} gt_{\max}^2 \\
+            & = v_0\sen\theta\left(\frac{v_0\sen\theta}{g}\right) - \frac{1}{2}g\left(\frac{v_0\sen\theta}{g}\right) \\
+            \intertext{o bien}
+            y_{\max} & = \frac{v_0^2\sen^2\theta}{2g}
+        \end{align*}
+        
+        El proyectil llega al suelo cuando su altura final $y_f$ vuelve a ser cero, es decir
+        $$y_f = 0 = (\tan\theta)x_f - \left(\frac{g}{2v_0^2\cos^2\theta}\right)x_f^2$$
+        De aquí
+        $$x_f = \left(\frac{2v_0^2\cos^2\theta}{g}\right)\tan\theta = 2\frac{v_0^2}{g}\cos\theta\sen\theta$$
+        
+        Tomando en cuenta la identidad trigonométrica del seno del ángulo doble
+        $$\sen(2\theta) = 2\sen\theta\cos\theta.$$
+        Tenemos entonces que el alcance del proyectil (R) es
+        $$R = x_f = \frac{v_0^2\sen(2\theta)}{g}.$$
+        
+        De aquí vemos que el alcance es máximo cuando la función seno toma el valor uno, lo cual se cumple si $2\theta = 90^\circ$ o bien $\theta = 45^\circ$.
+    \end{solucion}
+\end{example}
+
+Galileo Galilei demostró que existen dos valores del ángulo de disparo para los cuales se obtiene el mismo alcance $R$ si la rapidez de disparo $v_0$ es la misma. Estos ángulos son $\theta_1 = 45^\circ - \alpha$ y $\theta_2 = 45^\circ + \alpha$. Lo cual se verifica fácilmente si vemos que
+$$\sen(2\theta_1) = \sen(2\theta_2).$$
+
+\subsection{Movimiento relativo}
+
+Imagínese que usted viaja dentro de un vagón del metro y durante un intervalo de tiempo, de varios segundos, el metro tiene un MRU. Usted está de pie dentro del vagón y tiene una pelotita de goma, la cual deja caer dentro del vagón, ésta rebota en el piso, usted la toma y la vuelve a dejar caer en repetidas ocasiones durante el MRU del tren. La trayectoria de la pelotita que usted observa es una recta. El tren llega a una estación sin modificar su velocidad, y una persona en reposo dentro del andén observa el movimiento de la pelotita. ¿Qué tipo de trayectoria observa la persona en el andén?
+\begin{figure}
+    \centering
+    
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+El observador de pie en el andén, a diferencia del observador en movimiento, ve la componente horizontal de la velocidad de la pelotita, que es igual a la velocidad del tren. Entonces cuando el pasajero deja caer la pelotita, ésta se convierte en un proyectil que describe una parábola. Al rebotar en el piso, la fuerza normal que ejerce el piso sobre la pelotita le produce un cambio de dirección hacia arria, similar a un lanzamiento vertical, y se forma el otro arco de parábola. En la figura se muestra esta situación, en donde hemos considerado una pelotita perfectamente elástica.
+
+La trayectoria de un objeto depende de el sistema de referencia desde el cual se le observe. En física los sistemas de referencia útiles para observar el movimiento son los sistemas inerciales, aquellos sistemas en los que se cumple el \textbf{Principio de inercia de Galileo Galilei}.
+
+\textbf{“Todo cuerpo que esté en reposo o con movimiento rectilíneo uniforme, se mantendrá en reposo o con movimiento rectilíneo uniforme siempre que no exista agente externo que sobre el actúe”}
+
+Consideremos un \textbf{sistema de referencia inercial fijo} $S$, en reposo respecto al terreno, en donde el eje horizontal es el eje $x$ y el eje vertical es el eje $y$. Consideremos también un \textbf{sistema de referencia móvil} $S'$, cuyos ejes cartesianos $x'$, $y'$ son paralelos a los del sistema fijo, el cual se mueve con velocidad constante $\velou$ respecto al sistema $S$. Una partícula que en un instante inicial $t_0 = 0$, se encuentra en la posición inicial $\vecr_0$, respecto al sistema fijo $S$, también tendrá una posición $\vecr_0^{\phantom{1}'}$ en el sistema móvil $S'$. Véase la figura.
+\begin{figure}
+    \centering
+    \subfloat[]{
+        \begin{tikzpicture}[scale=0.5,font=\scriptsize]
+            \coordinate (O) at (0,0);
+            \coordinate (rs0) at (4,2);
+            \coordinate (rsp) at (6,5.5);
+            
+            \draw[ejes] (-0.5,0) -- (10,0) node[below] {$x$};
+            \draw[ejes] (0,-0.5) -- (0,7)
+                node[left] {$y$} 
+                node[midway,left] {$S$};
+    
+            \draw[ejes] (3.5,2) -- (9,2) node[below] {$x'$};
+            \draw[ejes] (4,1.5) -- (4,7)
+                node[left] {$y'$}
+                node[midway,left] {$S'$};
+    
+            \draw[vector,mainc] (O) -- (rs0) node[midway,below right] {$\vecr_{S'0}$};
+            \draw[vector,darkc] (rs0) -- (rsp) node[midway,below right] {$\vecr_0'$};
+            \draw[vector,red] (O) -- (rsp)
+                node[midway,above left] {$\vecr_0$}
+                node[anchor=west] {\color{black}$(x_0',y_0')$}
+                node[anchor=south east] {\color{black}$(x_0,y_0)$};
+    
+            \filldraw[black] (rsp) circle (0.5pt);
+    
+            \draw[vector,ultra thick,orange] (8,3.5) -- (10,3.5) node[midway,above] {$\velou$};
+        \end{tikzpicture}
+    }\hfil
+    \subfloat[]{
+        \begin{tikzpicture}[scale=0.5,font=\scriptsize]
+            \coordinate (O) at (0,0);
+            \coordinate (rs0) at (4,2);
+            \coordinate (rsp) at (6,5.5);
+            
+            \draw[ejes] (-0.5,0) -- (10,0) node[below] {$x$};
+            \draw[ejes] (0,-0.5) -- (0,7)
+                node[left] {$y$} 
+                node[midway,left] {$S$};
+    
+            \draw[ejes] (3.5,2) -- (9,2) node[below] {$x'$};
+            \draw[ejes] (4,1.5) -- (4,7)
+                node[left] {$y'$}
+                node[midway,left] {$S'$};
+    
+            \draw[vector,mainc] (O) -- (rs0) node[midway,below right] {$\vecr_{S'0}$};
+            \draw[vector,darkc] (rs0) -- (rsp) node[midway,below right] {$\vecr_0'$};
+            \draw[vector,red] (O) -- (rsp)
+                node[midway,above left] {$\vecr_0$}
+                node[anchor=west] {\color{black}$(x_0',y_0')$}
+                node[anchor=south east] {\color{black}$(x_0,y_0)$};
+    
+            \filldraw[black] (rsp) circle (0.5pt);
+    
+            \draw[vector,ultra thick,orange] (8,3.5) -- (10,3.5) node[midway,above] {$\velou$};
+        \end{tikzpicture}
+    }
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+Transcurrido un intervalo de tiempo $\Deltat = t$, ahora la partícula se encuentra en la posición final $\vecr$ en el sistema fijo $S$, y en la posición final $\vecr'$ en el sistema móvil $S'$. Si llamamos $\vecr_{S'}$ a la posición del origen del sistema móvil, respecto al sistema fijo. Como se observa en la figura, la posición de la partícula en el sistema fijo $S$, es igual a la posición del origen del sistema móvil $S'$ mas la posición de la partícula, medida en el sistema móvil $S'$. Esto es
+$$\vecr = \vecr_{S'} + \vecr'$$
+Una relación similar se cumple también para los desplazamientos
+$$\Deltar = \Deltar_{S'} + \Deltar'$$
+Pues
+$$\vecr_0 = \vecr_{S'0} + \vecr_0'$$
+Si obtenemos la derivada, respecto al tiempo, de la posición instantánea
+$$\frac{d}{dt}\vecr = \frac{d}{dt}\vecr_{S'} + \frac{d}{dt}\vecr'$$
+O bien
+$$\veloi = \velou + \veloi'$$
+A esta relación se le conoce como la \textbf{transformación de velocidades de Galileo}. Cuando las velocidades de los objetos se aproximan a la velocidad de la luz, ésta relación ya no se cumple, en la teoría de la relatividad especial de Einstein es sustituida por las transformaciones de Lorentz.
+
+Si volvemos a obtener la derivada temporal, nos queda
+$$\frac{d}{dt}\veloi = \frac{d}{dt}\velou + \frac{d}{dt}\veloi'$$
+O bien
+$$\acei = \acei'$$
+Pues al ser $\velou$ constante su derivada es cero.
+
+Decimos que la aceleración de un objeto, una partícula, es una cantidad \textbf{invariante} en los sistemas que se mueven a \textbf{velocidad constante} respecto a un sistema inercial. Si la partícula tiene un movimiento rectilíneo uniforme en el sistema inercial fijo $S$, entonces su aceleración $\acei$ es igual a cero; por lo tanto, también lo es en el sistema móvil $\acei' = 0$ y su movimiento también será rectilíneo uniforme en ese sistema móvil $S'$. Es decir, si tenemos un \textbf{sistema de referencia inercial}, cualquier otro sistema de referencia que se mueva a velocidad constante respecto a él, también será un sistema inercial.
+
+La posición, el desplazamiento y la velocidad dependen del sistema de referencia inercial desde el cual se observen, se midan; no así la aceleración la cual es una cantidad invariante. Desde el sistema de referencia en el cual el Sol se encuentre en reposo, supongamos que es inercial, nuestro planeta, La Tierra, tiene un movimiento que es casi circular uniforme, evidentemente un sistema de referencia, fijo en algún punto de la Tierra, no será un sistema inercial puesto que no tiene un MRU respecto al sistema de referencia del Sol. Sin embargo, durante un intervalo corto de tiempo, la Tierra, moviéndose en el espacio, se comporta como un sistema inercial, pues en desplazamientos de corta duración su movimiento es casi un MRU.
+\begin{figure}
+    \centering
+    
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{example}{}{}
+    Un hombre desea atravesar, en lancha, un río que lleva una corriente hacia abajo de 0.8m/s. En aguas tranquilas la lancha tiene una rapidez de 1.6m/s. El hombre debe ir del punto $A$ al punto $B$ enfrente de él, al otro lado del río. ¿Con que ángulo $\theta$, medido desde la línea $AB$, debe el hombre dirigir la lancha contra corriente (ver Figura~) para llegar al punto $B$? Si el río tiene de ancho 24m, ¿En cuánto tiempo el hombre atravesará el río?
+    \vspace{2mm}
+    \sol Se trata de un problema de movimiento relativo. Nuestro sistema fijo estaría evidentemente anclado al terreno, con el eje $x$ horizontal con dirección positiva hacia la derecha, hacia donde corre el río; y el eje $y$ en la dirección perpendicular con la dirección positiva hacia arriba. El sistema móvil, está anclado al rio que se mueve a velocidad constante, con los ejes $x'$, $y'$ paralelos a los ejes $x$ y $y$. En nuestro sistema fijo $S$, la velocidad del sistema móvil es
+        $$\velou = u\veci$$
+        Visto desde la orilla del rio, el terreno, la lancha debe moverse del punto $A$ al punto $B$, en línea recta. Por lo tanto, su vector velocidad en el sistema fijo es
+        $$\veloi = v\vecj$$
+        En el sistema móvil la velocidad $\veloi'$ de la lancha tiene dos componentes:
+        $$v_x' = -v'\sen\theta \quad \text{y} \quad v_y' = v'\cos\theta$$
+        donde $\theta$ es el ángulo medido desde la línea $AB$ hacia la dirección del vector $\vecr'$, la componente $x$ se opone a la corriente del río. Es decir,
+        $$\veloi' = -v'\sen\theta\veci + v'\cos\theta\vecj$$
+        De acuerdo con la transformación de velocidades de Galileo
+        $$\veloi = \velou + \veloi'$$
+        Tenemos
+        $$v\vecj = u\veci + (-v'\sen\theta\veci + v'\cos\theta\vecj)$$
+        O bien
+        $$v\vecj = (u-v'\sen\theta)\veci + v'\cos\theta\vecj$$
+        De donde tenemos las ecuaciones
+        $$0 = u-v'\sen\theta \quad \text{y} \quad v = v'\cos\theta$$
+        De la primera ecuación
+        $$\sen\theta = \frac{u}{v'} = \frac{0.8\,\text{m/s}}{1.6\,\text{m/s}} = 0.5$$
+        Por lo tanto, el ángulo es
+        $$\theta = \arcsen(0.5) = 30^\circ$$
+        De la segunda ecuación, la rapidez de la lancha respecto al terreno es
+        $$v = v'\cos\theta = (1.6\,\text{m/s})\cos(30^\circ) = 1.386\,\text{m/s}$$
+        Por lo tanto, el tiempo que tarda la lancha en cruzar el río es
+        \begin{equation*}
+            t = \frac{d}{v} = \frac{24\,\text{m}}{1.386\,\text{m/s}} = 17.32\,\text{s}. \tag*{\Square}
+        \end{equation*}
+\end{example}
+
+\begin{semblanza}{Galileo Galilei}{1564–1642}[Galileo.jpg]
+    Galileo Galilei fue una figura central de la Revolución Científica y es ampliamente reconocido como el padre de la ciencia moderna. Nacido en Pisa el 15 de febrero de 1564, desarrolló una vasta carrera como astrónomo, físico, matemático, ingeniero y filósofo natural. Su pensamiento riguroso, fundamentado en la observación empírica, la experimentación sistemática y el razonamiento matemático, sentó las bases del método científico contemporáneo y marcó una ruptura con la tradición escolástica imperante.
+
+    A lo largo de su vida, realizó contribuciones fundamentales a diversas ramas de la ciencia. En física, estudió el movimiento de los cuerpos, formulando principios sobre la caída libre, la inercia y la trayectoria parabólica de los proyectiles, anticipando los desarrollos posteriores de la mecánica newtoniana. En astronomía, perfeccionó el telescopio —instrumento que no inventó, pero que elevó a un nivel sin precedentes— y lo empleó para realizar observaciones revolucionarias: descubrió los satélites mayores de Júpiter (los denominados galileanos), observó las fases de Venus, registró manchas solares y estudió el relieve de la Luna, refutando así la idea aristotélica de la inmutabilidad de los cielos.
+
+    Galileo también tuvo un papel crucial en la formulación y defensa del sistema heliocéntrico de Nicolás Copérnico, lo que lo llevó a un conflicto directo con la Iglesia Católica. En 1632 publicó su obra más conocida, \textit{Diálogo sobre los dos máximos sistemas del mundo}, en la que comparaba los modelos geocéntrico y heliocéntrico mediante un diálogo entre tres personajes. Esta publicación le valió ser procesado por la Inquisición romana, que lo obligó a abjurar de sus convicciones en 1633, imponiéndole arresto domiciliario hasta su muerte.
+
+    Además de sus descubrimientos empíricos, Galileo fue un profundo pensador filosófico. Defendió la idea de que el \textit{"libro de la naturaleza"} está escrito en lenguaje matemático, un principio que transformó la epistemología científica y cimentó la separación entre ciencia y religión en la interpretación del mundo natural. Su obra \textit{Il Saggiatore} es una defensa apasionada de la razón, el escepticismo y la libertad intelectual.
+
+    Galileo falleció el 8 de enero de 1642 en su villa de Arcetri, cerca de Florencia. Pese a las persecuciones y restricciones impuestas en vida, su legado se consolidó como uno de los pilares de la ciencia moderna y símbolo de la lucha por el conocimiento racional frente a la imposición dogmática. Su influencia se extiende más allá de la ciencia, alcanzando la filosofía, la educación y la cultura occidental en su conjunto.
+\end{semblanza}

@@ -1,0 +1,41 @@
+\pagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]%
+    \coordinate (A) at ($(current page.north)!.55!(current page.north east)$);
+    \coordinate (B) at ($(current page.east)+(0,6)$);
+    \coordinate (C) at (current page.north east);
+
+    \filldraw[mainc!50!white] (A) -- (B) -- (C) -- cycle;
+    \filldraw[mainc!90] ($(A)+(7mm,0)$) -- ($(B)+(0,4mm)$) -- (C) -- cycle;%
+    
+    \coordinate (D) at ($(current page.south)!.75!(current page.south east)$);
+    \coordinate (E) at ($(current page.east)+(0,-8.5)$);
+    \coordinate (F) at (current page.south east);
+
+    \filldraw[mainc!50!white] (D) -- (E) -- (F) -- cycle;
+    \filldraw[mainc!90] ($(D)+(4mm,0)$) -- ($(E)+(0,-3mm)$) -- (F) -- cycle;%
+
+    \node[anchor=north] (ipn) at ($(current page.north)+(0,-4cm)$)
+        {\selectfont\TrajanProR\fontsize{21.6}{21.6}\selectfont INSTITUTO POLITÉCNICO NACIONAL};
+    \node[anchor=north] (tit) at ($(ipn.south)+(0,-17.5mm)$)
+        {\selectfont\color{mainc}\superior\bfseries\fontsize{55}{56}\selectfont\MakeUppercase{Introducción}};
+    \node[anchor=north] (titu) at ($(tit.south)+(0,-4mm)$)
+        {\selectfont\color{mainc!50!white}\superior\bfseries\fontsize{55}{56}\selectfont\MakeUppercase{a la Física}};
+    \node[anchor=north] (subtit) at ($(titu.south)+(0,-6mm)$)
+        {\selectfont\color{mainc}\cafe\bfseries\fontsize{30}{38}\selectfont\MakeUppercase{El Universo en Movimiento}};
+
+    \node[anchor=north] (prof) at ($(subtit.south)+(-4.4cm,-18mm)$)
+        {\selectfont\ipn\fontsize{19}{19}\selectfont\parbox{6cm}{\centering Adolfo Helmut\\Navarro Rudolf}};
+
+    \node[anchor=north] (autor) at ($(subtit.south)+(4.4cm,-18mm)$)
+        {\selectfont\ipn\fontsize{19}{19}\selectfont\parbox[c]{6cm}{\centering Vicente\\Chavarría Gámez}};
+
+    \node[anchor=north] at ($(prof.south)+(0,-17mm)$)
+        {\includegraphics[width=0.22\pagewidth]{images/portada/IPN.pdf}};
+    \node[anchor=north] at ($(autor.south)+(0,-19mm)$)
+        {\includegraphics[width=0.25\pagewidth]{images/portada/ESFM.pdf}};
+
+    \node[anchor=north] at ($(subtit.south)+(0,-14cm)$)
+        {\selectfont\fontsize{13}{13}\selectfont México, 2025};
+\end{tikzpicture}
+
+\cleardoublepage
