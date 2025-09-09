@@ -380,15 +380,13 @@ Esta operación cumple una serie de propiedades fundamentales, que se enuncian e
 
 \begin{theorem}{}{propiedades_producto_escalar}
     Sean $\veca, \vecb \in \RR[3]$ y sean $\lambda, \mu \in \RR$. Entonces se cumplen las siguientes propiedades:
-    % \begin{multicols}{2}
         \begin{enumerate}[label=\textit{\roman*)}]
             \item \textbf{Conmutatividad}: $\lambda \veca = \veca \lambda$.
             \item \textbf{Asociatividad respecto al producto de escalares}: $(\lambda \cdot \mu)\veca = \lambda(\mu \cdot \veca)$.
             \item \textbf{Distributividad respecto a la suma de escalares}: $(\lambda + \mu) \veca = \lambda\veca + \mu\veca$.
             \item \textbf{Distributividad respecto a la suma de vectores}: $\lambda(\veca + \vecb) = \lambda\veca + \lambda\vecb$.
         \end{enumerate}
-    % \end{multicols}
-    \dem Los incisos \textit{\creato\selectfont\color{mainc} ii)} y \textit{\creato\selectfont\color{mainc}iv)} se dejan como ejercicios para el lector.
+    \dem Los incisos \romano{ii} y \romano{iv} se dejan como ejercicios para el lector.
         \begin{enumerate}[label=\textit{\roman*)}]
             \item Por la \refdef{producto_escalar} en $\RR[3]$, se tiene:
             $$\lambda\veca = \lambda(a_x, a_y, a_z) = (\lambda a_x, \lambda a_y, \lambda a_z).$$
@@ -482,7 +480,7 @@ Gracias a esta propiedad geométrica, el producto interno facilita la resolució
 El producto interno se puede calcular sin necesidad de conocer el ángulo explícitamente. Para ello, utilizamos una fórmula alternativa que expresa el producto interno directamente en términos de las coordenadas de los vectores. Esta fórmula se obtiene del uso del sistema de coordenadas cartesianas y proporciona una forma algebraica de calcular el producto interno sin recurrir al ángulo entre los vectores. Dicha fórmula, se demuestra del siguiente:
 
 \begin{theorem}{}{producto_interno_canonico}
-    Sean $\veca, \vec \in$ \RR[3] vectores. Entonces su producto interno puede expresarse como:
+    Sean $\veca, \vecb \in$ \RR[3] vectores. Entonces su producto interno puede expresarse como:
     $$\veca \cdot \vecb = a_x b_x + a_y b_y + a_z b_z.$$
     \dem Consideremos el producto interno de los vectores $\veca$ y $\vecb$, el cual, según la \refdef{producto_interno_geometrico}, está dado por la expresión
         $$\veca \cdot \vecb = \|\veca\| \|\vecb\| \cos \theta,$$
@@ -493,7 +491,7 @@ El producto interno se puede calcular sin necesidad de conocer el ángulo explí
         lo que se puede expandir utilizando la identidad algebraica para el cuadrado de la diferencia. Al desarrollar los términos, obtenemos
         $$\|\vecb - \veca\|^2 = \sum_{i=x,y,z} (b_i^2 - 2a_i b_i + a_i^2) = \|\vecb\|^2 + \|\veca\|^2 - 2(a_x b_x + a_y b_y + a_z b_z).$$
         
-        Por otro lado, la magnitud del vector diferencia también puede expresarse utilizando la ley de los cosenos para vectores. Esta ley establece que
+        Por otro lado, la magnitud del vector diferencia también puede expresarse tomando como cierta la ley de los cosenos para vectores. La cual, establece que
         $$\|\vecb - \veca\|^2 = \|\veca\|^2 + \|\vecb\|^2 - 2 \|\veca\| \|\vecb\| \cos \theta.$$
         Al igualar ambas expresiones obtenidas para $\|\vecb - \veca\|^2$, se tiene
         $$\|\veca\|^2 + \|\vecb\|^2 - 2(a_x b_x + a_y b_y + a_z b_z) = \|\veca\|^2 + \|\vecb\|^2 - 2 \|\veca\| \|\vecb\| \cos \theta.$$
@@ -614,8 +612,8 @@ A continuación, presentaremos la definición del producto cruz en $\RR[3]$, que
     Definimos el \textbf{producto cruz} de dos vectores $\veca, \vecb \in \RR[3]$ como el vector $\veca \times \vecb$ que cumple:
     $$\|\veca \times \vecb\| = \|\veca\|\,\|\vecb\| \sen \theta,$$
     donde $\theta$ es el ángulo entre $\veca$ y $\vecb$. La dirección de $\veca \times \vecb$ es perpendicular al plano determinado por estos vectores y su sentido se establece mediante la \textbf{regla de la mano derecha} (veáse la Figura~\ref{fig:righthand_rule}). Formalmente, se expresa como:
-    $$\veca \times \vecb = \|\veca\|\,\|\vecb\| \sen \theta \,\vecu,$$
-    siendo $\vecu$ el vector unitario perpendicular a $\veca$ y $\vecb$ de acuerdo con dicha orientación.
+    $$\veca \times \vecb = \|\veca\|\,\|\vecb\| \sen \theta \,\uniu,$$
+    siendo $\uniu$ el vector unitario perpendicular a $\veca$ y $\vecb$ de acuerdo con dicha orientación.
 \end{definition}
 
 A continuación, se presenta un teorema que establece la expresión del producto vectorial en términos de un determinante:
@@ -675,18 +673,18 @@ Posteriormente, se dan en el siguiente teorema las propiedades fundamentales del
         \item \textbf{Producto de Vectores Unitarios:} $\veci \times \veci = \vecj \times \vecj = \veck \times \veck = \vecce, \quad \veci \times \vecj = \veck, \quad \vecj \times \veck = \veci, \quad \veck \times \veci = \vecj.$
     \end{enumerate}
     \vspace{2mm}
-    \dem Los incisos \textit{\creato\selectfont\color{mainc}ii)}, \textit{\creato\selectfont\color{mainc}iii)} y \textit{\creato\selectfont\color{mainc}iv)} se dejan como ejercicio al lector.
+    \dem Los incisos \romano{ii}, \romano{iii} y \romano{iv} se dejan como ejercicio al lector.
     \begin{enumerate}[label=\textit{\roman*)}]
-        \item Sean $\vec{u}, \vec{v} \in$ \RR[3], con componentes
-        $$\vec{u} = (u_1, u_2, u_3), \qquad \vec{v} = (v_1, v_2, v_3).$$
-        Usando la \refdef{producto_cruz}, el producto cruz de $\vec{u}$ con $\vec{v}$ se define como:
-        $$\vec{u} \times \vec{v} = 
+        \item Sean $\veca, \vecb \in$ \RR[3], con componentes
+        $$\veca = (a_1, a_2, a_3), \qquad \vecb = (b_1, b_2, b_3).$$
+        Usando la \refdef{producto_cruz}, el producto cruz de $\veca$ con $\vecb$ se define como:
+        $$\veca \times \vecb = 
         \begin{vmatrix}
             \veci & \vecj & \veck \\
-            u_1 & u_2 & u_3 \\
-            v_1 & v_2 & v_3
+            a_1 & a_2 & a_3 \\
+            b_1 & b_2 & b_3
         \end{vmatrix}
-        = (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}.$$
+        = (a_2b_3 - a_3b_2)\veci - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}.$$
         Análogamente, el producto cruz de $\vec{v}$ con $\vec{u}$ es:
         $$\vec{v} \times \vec{u} = 
         \begin{vmatrix}
@@ -727,27 +725,24 @@ Esta definición preserva la estructura del cálculo diferencial escalar y permi
         \item \textbf{Derivada del Producto Escalar-Vectorial}:
         $$\frac{d}{dt} \bigl(\phi(t)\,\veca(t)\bigr) = \frac{d\phi(t)}{dt}\,\veca(t) + \phi(t)\,\frac{d\veca(t)}{dt}.$$
     \end{enumerate}
-    \begin{demo}
-        Los incisos \textit{\creato\selectfont\color{mainc}ii)}, \textit{\creato\selectfont\color{mainc}iii)} y \textit{\creato\selectfont\color{mainc}iv)} se dejan como ejercicios para el lector.
-        \begin{enumerate}[label=\textit{\roman*)}]
-            \item Suponiendo que $\veca(t)$ y $\vecb(t)$ son funciones diferenciables respecto del tiempo y utilizando la \refdef{derivada_vector} tenemos que
-                \begin{fullwidth}[      width=\dimexpr\textwidth-\marginparsep-2cm\relax,%
-                                  outermargin=\dimexpr-2cm-\marginparsep\relax]%
-                    \begin{align*}
-                        \frac{d \bigl(\veca(t) + \vecb(t)\bigr)}{dt} & = \lim_{\Deltat \to 0} \left[\frac{\veca(t + \Deltat) - \veca(t)}{\Deltat} + \frac{\vecb(t + \Deltat) - \vecb(t)}{\Deltat}\right] \\
-                        & = \lim_{\Deltat \to 0} \frac{\veca(t + \Deltat) - \veca(t)}{\Deltat} + \lim_{\Deltat \to 0} \frac{\vecb(t + \Deltat) - \vecb(t)}{\Deltat} \\
-                        & = \lim_{\Deltat \to 0} \left(\frac{[a_x(t + \Deltat)\veci + a_y(t + \Deltat)\vecj + a_z(t + \Deltat)\veck] - [a_x(t)\veci + a_y(t)\vecj + a_z(t)\veck]}{\Deltat}\right) \, + \\
-                        & \quad + \lim_{\Deltat \to 0} \left(\frac{[b_x(t + \Deltat)\veci + b_y(t + \Deltat)\vecj + b_z(t + \Deltat)\veck] - [b_x(t)\veci + b_y(t)\vecj + b_z(t)\veck]}{\Deltat}\right) \\
-                        & = \lim_{\Deltat \to 0} \left(\frac{a_x(t + \Deltat) - a_x(t)}{\Deltat}\veci + \frac{a_y(t + \Deltat) - a_y(t)}{\Deltat}\vecj + \frac{a_z(t + \Deltat) - a_z(t)}{\Deltat}\veck\right) \, + \\
-                        & \quad + \lim_{\Deltat \to 0} \left(\frac{b_x(t + \Deltat) - b_x(t)}{\Deltat}\veci + \frac{b_y(t + \Deltat) - b_y(t)}{\Deltat}\vecj + \frac{b_z(t + \Deltat) - b_z(t)}{\Deltat}\veck\right) \\
-                        & = \left[\lim_{\Deltat \to 0} \frac{\Deltaax}{\Deltat}\veci + \lim_{\Deltat \to 0} \frac{\Deltaay}{\Deltat}\vecj + \lim_{\Deltat \to 0} \frac{\Deltaaz}{\Deltat}\veck\right] + \left[\lim_{\Deltat \to 0} \frac{\Deltabx}{\Deltat}\veci + \lim_{\Deltat \to 0} \frac{\Deltaby}{\Deltat}\vecj + \lim_{\Deltat \to 0} \frac{\Deltabz}{\Deltat}\veck\right] \\
-                        & = \left(\frac{d\,a_x}{dt}\,\veci + \frac{d\,a_y}{dt}\,\vecj + \frac{d\,a_z}{dt}\,\veck\right) + \left(\frac{d\,b_x}{dt}\,\veci + \frac{d\,b_y}{dt}\,\vecj + \frac{d\,b_z}{dt}\,\veck\right) \\
-                        & = \frac{d}{dt}\veca(t) + \frac{d}{dt}\vecb(t).
-                    \end{align*}
-                \end{fullwidth}
-        \end{enumerate}
-        Por lo tanto, queda demostrado que $\dfrac{d}{dt} \bigl(\veca(t) + \vecb(t)\bigr) = \dfrac{d}{dt}\veca(t) + \dfrac{d}{dt}\vecb(t).$
-    \end{demo}
+    \dem Los incisos \romano{ii}, \romano{iii} y \romano{iv} se dejan como ejercicios para el lector.
+    \begin{enumerate}[label=\textit{\roman*)}]
+        \item Suponiendo que $\veca(t)$ y $\vecb(t)$ son funciones diferenciables respecto del tiempo y utilizando la \refdef{derivada_vector} tenemos que
+            % \begin{fullwidth}[      width=\dimexpr\textwidth-\marginparsep-2cm\relax,%
+            %                   outermargin=\dimexpr-2cm-\marginparsep\relax]%
+                \begin{align*}
+                    \frac{d \bigl(\veca(t) + \vecb(t)\bigr)}{dt} & = \lim_{\Deltat \to 0} \left[\frac{\veca(t + \Deltat) - \veca(t)}{\Deltat} + \frac{\vecb(t + \Deltat) - \vecb(t)}{\Deltat}\right] \\
+                    & = \lim_{\Deltat \to 0} \frac{\veca(t + \Deltat) - \veca(t)}{\Deltat} + \lim_{\Deltat \to 0} \frac{\vecb(t + \Deltat) - \vecb(t)}{\Deltat} \\
+                    & = \lim_{\Deltat \to 0} \left(\frac{[a_x(t + \Deltat)\veci + a_y(t + \Deltat)\vecj + a_z(t + \Deltat)\veck] - [a_x(t)\veci + a_y(t)\vecj + a_z(t)\veck]}{\Deltat}\right) \, + \\
+                    & \quad + \lim_{\Deltat \to 0} \left(\frac{[b_x(t + \Deltat)\veci + b_y(t + \Deltat)\vecj + b_z(t + \Deltat)\veck] - [b_x(t)\veci + b_y(t)\vecj + b_z(t)\veck]}{\Deltat}\right) \\
+                    & = \lim_{\Deltat \to 0} \left(\frac{a_x(t + \Deltat) - a_x(t)}{\Deltat}\veci + \frac{a_y(t + \Deltat) - a_y(t)}{\Deltat}\vecj + \frac{a_z(t + \Deltat) - a_z(t)}{\Deltat}\veck\right) \, + \\
+                    & \quad + \lim_{\Deltat \to 0} \left(\frac{b_x(t + \Deltat) - b_x(t)}{\Deltat}\veci + \frac{b_y(t + \Deltat) - b_y(t)}{\Deltat}\vecj + \frac{b_z(t + \Deltat) - b_z(t)}{\Deltat}\veck\right) \\
+                    & = \left[\lim_{\Deltat \to 0} \frac{\Deltaax}{\Deltat}\veci + \lim_{\Deltat \to 0} \frac{\Deltaay}{\Deltat}\vecj + \lim_{\Deltat \to 0} \frac{\Deltaaz}{\Deltat}\veck\right] + \left[\lim_{\Deltat \to 0} \frac{\Deltabx}{\Deltat}\veci + \lim_{\Deltat \to 0} \frac{\Deltaby}{\Deltat}\vecj + \lim_{\Deltat \to 0} \frac{\Deltabz}{\Deltat}\veck\right] \\
+                    & = \left(\frac{d\,a_x}{dt}\,\veci + \frac{d\,a_y}{dt}\,\vecj + \frac{d\,a_z}{dt}\,\veck\right) + \left(\frac{d\,b_x}{dt}\,\veci + \frac{d\,b_y}{dt}\,\vecj + \frac{d\,b_z}{dt}\,\veck\right) \\
+                    & = \frac{d}{dt}\veca(t) + \frac{d}{dt}\vecb(t).
+                \end{align*}
+        Por lo tanto, queda demostrado que $\dfrac{d}{dt} \bigl(\veca(t) + \vecb(t)\bigr) = \dfrac{d}{dt}\veca(t) + \dfrac{d}{dt}\vecb(t).$ \hfill \BlackSquare
+    \end{enumerate}
 \end{theorem}
 
 Estas propiedades constituyen la base del cálculo diferencial aplicado a funciones vectoriales. Al preservar la estructura del cálculo escalar, nos permiten extender de forma natural las técnicas de diferenciación a trayectorias y campos en el espacio, lo cual resulta fundamental para el estudio del movimiento. Con estos resultados en mano, pasamos a abordar la cinemática, la rama de la mecánica que se ocupa de describir el movimiento sin considerar las causas que lo originan.
@@ -1267,7 +1262,7 @@ Es decir, los ejes polares $r$ y $\theta$, son perpendiculares entre sí, igual 
     \end{demo}
 \end{proposition}
 
-En la Figura~\ref{fig:coordenadas_polares} mostramos los nuevos ejes coordenados, así como sus vectores básicos $\vecu_r$ y $\vecu_\theta$.
+En la Figura~\ref{fig:coordenadas_polares} mostramos los nuevos ejes coordenados, así como sus vectores básicos $\uniu_r$ y $\uniu_\theta$.
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -1303,15 +1298,15 @@ En la Figura~\ref{fig:coordenadas_polares} mostramos los nuevos ejes coordenados
         \draw[vector,orange] (O) -- (0,0.75) node[midway,left] {$\vecj$};
         % Vectores unitarios de u
         \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596-0.5,\yvalA+0.5)
-            node[left] {$\vecu_\theta$};
+            node[left] {$\uniu_\theta$};
         \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596+0.5,\yvalA+0.5)
-            node[midway,below right] {$\vecu_r$};
+            node[midway,below right] {$\uniu_r$};
     \end{tikzpicture}
-    \caption{Diagrama en coordenadas polares que muestra la posición de la partícula sobre la circunferencia, junto a la representación de los vectores del sistema: el vector posición $\vecr$, el vector velocidad $\veloi$, los ejes cartesianos $\veci$ y $\vecj$, y los vectores unitarios polares $\vecu_r$ y $\vecu_\theta$.}
+    \caption{Diagrama en coordenadas polares que muestra la posición de la partícula sobre la circunferencia, junto a la representación de los vectores del sistema: el vector posición $\vecr$, el vector velocidad $\veloi$, los ejes cartesianos $\veci$ y $\vecj$, y los vectores unitarios polares $\uniu_r$ y $\uniu_\theta$.}
     \label{fig:coordenadas_polares}
 \end{figure}
 
-Los vectores básicos del nuevo sistema polar de coordenadas $\vecu_r$ y $\vecu_\theta$ son vectores unitarios paralelos a los vectores $\vecr$ y $\veloi$ respectivamente. Para escribirlos en función de los vectores básicos del sistema de coordenadas cartesianas $\veci$ y $\vecj$ usaremos el siguiente resultado.
+Los vectores básicos del nuevo sistema polar de coordenadas $\uniu_r$ y $\uniu_\theta$ son vectores unitarios paralelos a los vectores $\vecr$ y $\veloi$ respectivamente. Para escribirlos en función de los vectores básicos del sistema de coordenadas cartesianas $\veci$ y $\vecj$ usaremos el siguiente resultado.
 \begin{theorem}{}{}
     Asociado a todo vector $\veca$, distinto del vector cero $\vecce$, existe un vector unitario $\auni$ que es paralelo a él. Este vector es
     $$\auni = \frac{1}{a}\veca.$$
@@ -1325,7 +1320,7 @@ Los vectores básicos del nuevo sistema polar de coordenadas $\vecu_r$ y $\vecu_
 \end{theorem}
 
 De acuerdo con este teorema, los \textbf{vectores básicos} del sistema de coordenadas polares son
-$$\vecu_r =  \runi = \frac{1}{r}\vecr = \frac{1}{r}(r\cos\theta\veci + r\sen\theta\vecj) = \cos\theta\veci + \sen\theta\vecj$$
+$$\uniu_r =  \runi = \frac{1}{r}\vecr = \frac{1}{r}(r\cos\theta\veci + r\sen\theta\vecj) = \cos\theta\veci + \sen\theta\vecj$$
 y
 $$\velou\theta = \thetau = \frac{1}{v}\veloi = \frac{1}{r}\left(-r\sen\theta\frac{d\theta}{dt}\veci + r\cos\theta\frac{d\theta}{dt}\vecj\right)$$
 
@@ -1428,9 +1423,9 @@ Ilustramos las componentes centrípeta y tangencial de la aceleración en la Fig
         \draw pic[-stealth,"$\theta$",draw=black,thick,angle radius=22,angle eccentricity=1.3] {angle=B--O--A};
         % Vectores unitarios de u
         \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596-0.5,\yvalA+0.5)
-            node[left] {$\vecu_\theta$};
+            node[left] {$\uniu_\theta$};
         \draw[vector,orange] (2.1213203435596,\yvalA) -- (2.1213203435596+0.5,\yvalA+0.5)
-            node[midway,below right] {$\vecu_r$};
+            node[midway,below right] {$\uniu_r$};
         % Vector a_c
         \draw[vector,red] (2.1213203435596,\yvalA) -- (2.1213203435596-1,\yvalA-1)
             node[midway,above left] {$\veca_c$};

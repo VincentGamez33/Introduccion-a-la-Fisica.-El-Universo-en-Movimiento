@@ -64,46 +64,40 @@ Estas fuerzas de acción y de reacción siempre actúan en cuerpos distintos. El
     Con toda acción ocurre siempre una reacción igual y contraria: O sea, las acciones mutuas de dos cuerpos siempre son iguales y dirigidas en direcciones opuestas.
 \end{tercera}
 
-\begin{tikzpicture}[scale=1.2, every node/.style={font=\sffamily}]
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.5]
+        \fill[mainc] (0,0) ellipse (8mm and 2.4cm) %
+        (0,-2.4) arc (270:360:8mm and 2.4cm) -- ++(0,0) arc (0:90:8mm and 2.4cm)  -- ++(8.25,0) -- ++(0,0) arc (90:0:8mm and 2.4cm) -- ++(0,0) arc (360:270:8mm and 2.4cm) -- ++(-8.25,0);
 
-% --- Definición de degradados ---
-\pgfdeclareradialshading{azulclaro}{\pgfpoint{-10bp}{0bp}}%
-  {color(0bp)=(cyan!30); color(40bp)=(cyan!60); color(80bp)=(cyan!30)}
+        \draw[line width=0.6mm] (0,2.4) arc (90:270:8mm and 2.4cm);
+        
+        \shade[top color=mainc!10!white,bottom color=mainc!40!white] (-6,2) -- ++(0,0) arc (90:0:8mm and 2cm) -- ++(0,0) arc (360:270:8mm and 2cm) -- ++(6,0) -- ++(0,0) arc (270:360:8mm and 2cm) -- ++(0,0) arc (0:90:8mm and 2cm) -- ++(-6,0);
+    
+        \foreach \x in {-5.2,-5.0,...,0} {
+            \draw (\x,2) arc (82:60:8mm and 2cm);
+        }
+    
+        \foreach \i/\x in {0/-5.4,1/-4.4,2/-3.4,3/-2.4,4/-1.4,5/-0.4} {
+            \draw (\x,2) -- ++(0,0) arc (82:30:8mm and 2cm) node[below] {\scriptsize$\mathbfit{\i}$};
+        }
 
-\pgfdeclareradialshading{azuloscuro}{\pgfpoint{-10bp}{0bp}}%
-  {color(0bp)=(blue!50!black!40); color(40bp)=(blue!70!black!60); color(80bp)=(blue!50!black!40)}
-
-% --- Cuerpo izquierdo (escala) ---
-\shade[shading=azulclaro] (-4,0.8) rectangle (-1, -0.8);
-\draw[thick] (-4,0.8) rectangle (-1,-0.8);
-
-% Escala de 0 a 5 N
-\foreach \i in {0,...,5} {
-  \draw[thick] (-4 + 0.6*\i,0.8) -- (-4 + 0.6*\i,0.6);
-  \node[font=\small] at (-4 + 0.6*\i,0.4) {\i};
-}
-\node[font=\itshape\small, anchor=west] at (-3.7,-0.3) {Newtons};
-
-% Gancho izquierdo
-\draw[thick] (-4,0) -- (-4.4,0);
-\draw[thick] (-4.4,0) arc (180:540:0.15);
-
-% --- Cuerpo derecho (resorte) ---
-\shade[shading=azuloscuro] (-1,0.8) rectangle (2, -0.8);
-\draw[thick] (-1,0.8) rectangle (2,-0.8);
-
-% Resorte
-\draw[thick,decoration={coil,aspect=0.5,segment length=4pt,amplitude=4pt},decorate] 
-     (-1,0) -- (2,0);
-
-% Gancho derecho
-\draw[thick] (2,0) -- (2.4,0);
-\draw[thick] (2.4,0) arc (0:360:0.15);
-
-% Título
-\node[font=\sffamily\bfseries\large] at (-1,-1.2) {Newtómetro};
-
-\end{tikzpicture}
+        \begin{scope}[draw=gray,top color=gray!10!white,bottom color=gray!40!white,line width=0.2mm]
+            \shade (-6,0) ellipse (8mm and 2cm);
+            \draw (-6,2) arc (90:270:8mm and 2cm) -- ++(6,0) -- ++(0,0) arc (270:360:8mm and 2cm) -- ++(0,0) arc (0:90:8mm and 2cm) -- ++(-6,0) -- ++(0,0) arc (90:0:8mm and 2cm) -- ++(0,0) arc (360:270:8mm and 2cm);
+        \end{scope}
+    
+        \begin{scope}[line width=0.6mm]
+            \draw (-6,0) -- ++(-1.5,0) arc (0:240:6mm);
+            \draw[decorate,decoration={coil,amplitude=12pt,segment length=9pt}]
+                (0.8,0) -- (8,0);
+            \draw (7.7,0) -- ++(2.5,0) arc (180:360:6mm) -- ++(0,0) arc (0:60:6mm)
+                (0,-2.4) arc (270:360:8mm and 2.4cm) -- ++(0,0) arc (0:90:8mm and 2.4cm) -- ++(8.25,0) -- ++(0,0) arc (90:0:8mm and 2.4cm) -- ++(0,0) arc (360:270:8mm and 2.4cm) -- ++(-8.25,0);
+        \end{scope}
+    \end{tikzpicture}
+    \caption{Esquema de un \textit{Newtómetro} (dinamómetro), instrumento empleado para medir fuerzas a partir de la elongación de un resorte elástico. La escala está graduada en Newtons.}
+    \label{fig:placeholder}
+\end{figure}
 
 \begin{semblanza}{Sir Isaac Newton}{1642–1727}[Newton.jpg]
     Sir Isaac Newton fue una de las mentes más brillantes y determinantes en la historia del pensamiento humano. Matemático, físico, astrónomo, alquimista, filósofo natural y teólogo inglés, su obra transformó de manera profunda y duradera la forma en que la humanidad concibe el universo. Nació el 25 de diciembre de 1642 (según el calendario juliano) en Woolsthorpe, Lincolnshire, en el seno de una Inglaterra convulsionada por intensos conflictos políticos y religiosos. Desde temprana edad manifestó una curiosidad inagotable y una capacidad excepcional para la observación y el razonamiento.
@@ -125,10 +119,10 @@ Estas fuerzas de acción y de reacción siempre actúan en cuerpos distintos. El
     Newton no sólo revolucionó la ciencia, transformó radicalmente nuestra concepción de la realidad. Su influencia es tan vasta que, siglos después, sus ideas siguen constituyendo pilares fundamentales de la formación científica. Su pensamiento riguroso, su creatividad sin límites y su incansable búsqueda del conocimiento continúan inspirando a quienes anhelan comprender las leyes que rigen el universo.
 \end{semblanza}
 
-% \section{Leyes de Fuerzas}
+\section{Leyes de Fuerzas}
 
-% \section[Ley de Gravitación Universal]{Ley de Gravitación Universal de Newton}
+\section[Ley de Gravitación Universal]{Ley de Gravitación Universal de Newton}
 
-% \section{Ley de Coulomb}
+\section{Ley de Coulomb}
 
 % \cleardoublepage

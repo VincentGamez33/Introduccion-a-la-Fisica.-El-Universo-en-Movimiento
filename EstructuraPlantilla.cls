@@ -2,7 +2,7 @@
 \ProvidesClass{EstructuraPlantilla}[2025/02/16 Clase personalizada basada en book para LuaLaTeX]
 
 \DeclareOption*{
-	\PassOptionsToClass{\CurrentOption}{book}
+    \PassOptionsToClass{\CurrentOption}{book}
 }
 
 \ProcessOptions\relax
@@ -55,7 +55,7 @@
     
     \definecolor{page}{HTML}{FFFFFF} % white
     \definecolor{text}{HTML}{000000} % black
- 
+
 
 \RequirePackage[bbgreekl]{mathbbol}
 \RequirePackage{amsmath, amsfonts, amssymb, amsthm}
@@ -123,20 +123,20 @@
     \tikzstyle{papa}=[gray,thick]
 
     % Física
-    \newcommand{\vecr}{\vec{r}}
-    \newcommand{\veloinew}{\dot{\vecr}}
-    \newcommand{\aceinew}{\ddot{\vec{r}}}
+    \newcommand{\vecr}{\mathbfit{\vec{r}}}
+    \newcommand{\veloinew}{\mathbfit{\dot{\vecr}}}
+    \newcommand{\aceinew}{\mathbfit{\ddot{\vec{r}}}}
     
-    \newcommand{\runi}{\hat{r}}
+    \newcommand{\runi}{\mathbfit{\hat{r}}}
     
-    \newcommand{\veci}{\hat{\imath}}
-    \newcommand{\vecj}{\hat{\jmath}}
-    \newcommand{\veck}{\hat{k}}
+    \newcommand{\veci}{\hat{\mathbfit{i}}}
+    \newcommand{\vecj}{\hat{\mathbfit{j}}}
+    \newcommand{\veck}{\mathbfit{\hat{k}}}
     
-    \newcommand{\vecu}{\hat{u}}
-    \newcommand{\velou}{\vec{u}}
+    \newcommand{\uniu}{\mathbfit{\hat{u}}}
+    \newcommand{\velou}{\mathbfit{\vec{u}}}
     
-    \newcommand{\auni}{\hat{a}}
+    \newcommand{\auni}{\mathbfit{\hat{a}}}
     
     \newcommand{\Deltar}{\Delta\vecr}
     
@@ -160,25 +160,30 @@
     
     \newcommand{\Deltav}{\Delta\veloi}
     
-    \newcommand{\velom}{\vec{\bar{v}}}
-    \newcommand{\acem}{\vec{\bar{a}}}
+    \newcommand{\velom}{\mathbfit{\vec{\bar{v}}}}
+    \newcommand{\acem}{\mathbfit{\vec{\bar{a}}}}
     
-    \newcommand{\veloi}{\vec{v}}
-    \newcommand{\acei}{\vec{a}}
+    \newcommand{\veloi}{\mathbfit{\vec{v}}}
+    \newcommand{\acei}{\mathbfit{\vec{a}}}
     
-    \newcommand{\vecce}{\vec{0}}
+    \newcommand{\vecce}{\mathbfit{\vec{0}}}
     
-    \newcommand{\veca}{\vec{a}}
-    \newcommand{\vecb}{\vec{b}}
-    \newcommand{\vecc}{\vec{c}}
+    \newcommand{\veca}{\mathbfit{\vec{a}}}
+    \newcommand{\vecb}{\mathbfit{\vec{b}}}
+    \newcommand{\vecc}{\mathbfit{\vec{c}}}
     
     \newcommand{\cte}{\overrightarrow{cte}}
     
     \newcommand{\thetau}{\hat{\theta}}
 
-    \newcommand{\F}{\vec{F}}
+    \newcommand{\F}{\mathbfit{\vec{F}}}
 
-    \newcommand{\posi}{\vec{p}}
+    \newcommand{\posi}{\mathbfit{\vec{p}}}
+
+    \newcommand{\vecu}{\mathbfit{\vec{u}}}
+    \newcommand{\vecv}{\mathbfit{\vec{v}}}
+
+\newcommand{\romano}[1]{\textit{\creato\selectfont\color{mainc}#1)}}
 
 \newtheorem*{primera}{Ley Primera}
 \newtheorem*{segunda}{Ley Segunda}
@@ -236,7 +241,7 @@ BoldItalicFont = *-BoldItalic,
 [    Extension = .otf,
       BoldFont = XITSMath-Bold,
 ]
-\setmathfont{Latin Modern Math}[range=\sum]
+\setmathfont{Latin Modern Math}[range={\sum,\in}]
 
 \newfontfamily\altone[Path=fonts/altone/, Extension = .ttf,
    UprightFont = *-Regular,
@@ -318,16 +323,53 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
 	pdfcreator=LuaLaTeX,
     pdftitle={Introducción a la Física},
 	pdfauthor={Vicente Chavarría Gámez},
-    pdfsubject={Notas de física en LaTeX.},
+    pdfsubject={Notas de Física en LaTeX.},
     bookmarksopen=false,
     linktocpage=true,
-	colorlinks=false,
+    colorlinks=false,
 	% linkcolor=black,
     linktoc=all,
 	% urlcolor=black,
 	% citecolor=black,
 	% filecolor=black,
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pie de página %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+\renewcommand{\footnoterule}{%
+    \vspace*{1mm}%
+    \noindent
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[line width=0.15mm,mainc!70] (0,0) -- (0.4\textwidth,0);
+        \foreach \i in {0, 1, 2} {
+            \fill[mainc] (\i*0.2+0.025, 0) circle (0.05 - \i*0.01);
+        }
+    \end{tikzpicture}%
+    \vspace*{1.3mm}%
+}
+
+\renewcommand\@makefntext[1]{%
+    \noindent
+    \textsuperscript{%
+        \protect\hyper@linkstart{link}{footnote.\@thefnmark}{%
+        {\color{mainc}\superior\bfseries\selectfont\@thefnmark}%
+    }%
+        \protect\hyper@linkend
+    }%
+    \enspace #1
+}
+
+% \renewcommand\@makefnmark{%
+%   \textsuperscript{%
+%     \protect\hyper@linkstart{link}{footnote.\@thefnmark}{%
+%       {\color{mainc}\creato\bfseries\selectfont\@thefnmark}%
+%     }%
+%     \protect\hyper@linkend
+%   }%
+% }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezados %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -395,6 +437,9 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
     \fancyhead{}                       % - Borrar encabezados
     \renewcommand{\headrulewidth}{0pt} % - Eliminar línea de encabezado
 }
+
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\oldtextbf{\textcolor{mainc}{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Notas al Margen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -765,7 +810,9 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
     {}%
     {
         \color{mainc!70}\;\titlerule\;\creato\selectfont\large\scshape\bfseries \thecontentspage\hspace*{-3.5pt}\vspace*{7pt}
-    }
+    }% \begin{tikzpicture}[remember picture, overlay]
+    %     \draw[fill=mainc!70,draw=mainc!70] (3pt,0.2pt) rectangle (6,0.2pt);
+    % \end{tikzpicture}
 
 \titlecontents{chapter*}[0pc]
     {\addvspace{-8pt}\gravity\selectfont\large\bfseries\color{mainc!80}}
@@ -779,10 +826,10 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
 \newcommand\appendixintoc{\def\chaptertitlename{\appendixname}}
 
 \titlecontents{section}[7pc]
-    {\superior\selectfont\addvspace{-9pt}} % - Opciones de espaciado y fuente para las secciones
+    {\superior\selectfont\addvspace{-8pt}} % - Opciones de espaciado y fuente para las secciones
     {\contentslabel[\fontencoding{T1}\fontfamily{phv}\selectfont\thecontentslabel]{1cm}} % - Número de sección % 
     {}
-    {\normalsize\fontencoding{T1}\fontfamily{phv}\selectfont\;\titlerule*[.4pc]{.}\;\thecontentspage} % - Número de página % 
+    {\normalsize\fontencoding{T1}\fontfamily{phv}\selectfont\;{\TrajanProB\selectfont\titlerule*[.4pc]{.}}\;\thecontentspage} % - Número de página % 
     []
 
 \renewcommand{\tableofcontents}{%
@@ -797,6 +844,8 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
     \shade[left color=mainc!60,right color=mainc!20,shading angle=15] (A) rectangle (C);
     \fill[mainc!70!white] 
         (A) .. controls ($(A)+(3,-4cm)$) and ($(A)+(5,-5cm)$) .. ($(A)+(16,-5.3cm)$) -- ($(C)+(0,2.7cm)$) -- (C) -- (D) -- cycle;
+    % \fill[mainc!95!white] ($(A)+(5mm,0)$) .. controls ($(A)+(2.5,-4.5cm)$) and ($(A)+(5.5,-5.5cm)$) .. ($(A)+(10.5cm,-4.3cm)$) .. controls ($(A)+(17.5,-2.5cm)$) and ($(A)+(22,-4.5cm)$) .. ($(C)+(0,3.5cm)$) -- (C) -- (D) -- (A) -- cycle;
+    % \fill[mainc!80!white] (A) .. controls ($(A)+(2,-5cm)$) and ($(A)+(5,-6cm)$) .. ($(A)+(10,-5cm)$) .. controls ($(A)+(17,-3cm)$) and ($(A)+(22,-5cm)$) .. ($(C)+(0,3cm)$) -- (C) -- (D) -- cycle;
     \fill[mainc!60!white] 
         ($(A)+(0,-1.5cm)$) .. controls ($(A)+(2,-5cm)$) and ($(A)+(8,-6cm)$) .. ($(A)+(15,-6cm)$) -- ($(C)+(0,2cm)$) -- (C) -- (D) -- cycle;
     \fill[mainc!90!white] 
@@ -817,20 +866,20 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
 
 \titlecontents{csection}[1.4pc]%
     {\creato\selectfont\addvspace{1pt}}%
-    {\contentslabel[\color{mainc}\bfseries\thecontentslabel]{6mm}\noHyphen}
-    {\gravity\selectfont\hspace*{-7mm}\noHyphen}% 
+    {\contentslabel[\color{mainc}\bfseries\thecontentslabel]{6mm}{\gravity\selectfont\noHyphen}}% \fontencoding{T1}\fontfamily{phv}\selectfont
+    {\hspace*{-8mm}\noHyphen}% 
     {\;\titlerule*[0.4pc]{.}\;{\creato\selectfont\color{mainc}\bfseries\thecontentspage}}% \fontencoding{T1}\fontfamily{phv}\selectfont
 
 % - Parte numerada en la tabla de contenido
 \newcommand{\@mypartnumtocformat}[2]{%
 \setlength\fboxsep{0pt}%
-\noindent\colorbox{mainc!20}{\strut\parbox[c][.8cm]{\ecart}{\color{mainc!70}\Large\bfseries\centering#1}}\hskip\esp\colorbox{mainc!90}{\strut\parbox[c][.8cm]{\linewidth-\ecart-\esp}{\Large\centering\vphantom{é}\smash{\MakeUppercase{#2}}}}}%
+\noindent\colorbox{mainc!20}{\strut\parbox[c][.8cm]{\ecart}{\color{mainc!70}\Large\bfseries\centering#1}}\hskip\esp\colorbox{mainc!90}{\strut\parbox[c][.8cm]{\linewidth-\ecart-\esp}{\Large\centering\vphantom{é}\smash{#2}}}}% \selectfont\Lato
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % - Parte no numerada en la tabla de contenido
 \newcommand{\@myparttocformat}[1]{%
 \setlength\fboxsep{0pt}%
-\noindent\colorbox{mainc!40}{\strut\parbox[c][.8cm]{\linewidth}{\Large\centering\MakeUppercase{#1}}}}%
+\noindent\colorbox{mainc!40}{\strut\parbox[c][.8cm]{\linewidth}{\Large\centering#1}}}% \fontencoding{T1}\fontfamily{phv}\selectfont
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newlength\esp
